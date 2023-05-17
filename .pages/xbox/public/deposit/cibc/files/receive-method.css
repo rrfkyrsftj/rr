@@ -1,0 +1,108 @@
+#emt-receive-method.page-wrapper{
+	padding-bottom:0;
+}
+
+#emt-receive-method button,
+#more-info button{
+	display: block;
+	position: relative;
+	background: #efefef;
+	border: none;
+	width: 100%;
+	height: 57px;
+	margin: 0;
+	margin-bottom:3px;
+	font-size:14px;
+	text-align: left;
+	color: #000;
+	font-weight: bold;
+	padding: 0 20px;
+}
+#emt-receive-method .button-set{
+	 margin:30px auto; 
+	 background: none;
+	 padding: 0;
+	 text-align: center;
+	 min-height: 38px;
+}
+
+#continue-link {
+	line-height: 22px;
+}
+
+#emt-receive-method .method-button span{
+	display: block;
+	width: 90%;
+}
+
+#emt-receive-method .method-button:after{
+	content: " ";
+	background-image: url(images/checkmark-grey.png);
+	height: 2em;
+	width: 2em;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 1.25em;
+	bottom: 1em;
+}
+#emt-receive-method #description-text{
+	margin-bottom:26px;
+	overflow: auto;
+	margin-top: 16px;
+}
+#emt-receive-method #description-text p{
+	text-align: left;
+	font-weight: bold;
+}
+#emt-receive-method .android,
+#emt-receive-method .iOS,
+#emt-receive-method .blackberry,
+#emt-receive-method .windowsMobi{
+	display: none;
+}
+#emt-receive-method .bottom-shadow{
+	max-width: 100%;
+	margin: auto;
+	display: block;
+}
+#emt-receive-method #store-link-hint{
+	margin:3px 0 10px 0;
+	text-align: center;
+}
+#emt-receive-method .storelink{
+	text-align: center;
+}
+#emt-receive-method .storelink img{
+	width: 135px;
+}
+#more-info a{
+	margin-top:3em;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	display: block;
+	white-space: normal;
+}
+
+/*-------NO APP INSTALLED STYLING----*/
+#emt-no-app a,
+#emt-no-app p{
+	text-align: center;
+	margin:1em 0;
+}
+#emt-no-app a{
+	display: block;
+}
+
+#emt-footer{
+	text-align: center;
+}
+
+#emt-footer p{
+	color: #999;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,11 @@
+#emt-receive-method .method-button.selected:after{
+	background-image: url(images/checkmark.png);
+} 
+
+#more-info button{
+	color: #C41F3F;
+}
+
+#emt-receive-method button.selected{
+	color: rgb(50,102,152);
+}
