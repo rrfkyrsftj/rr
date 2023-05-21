@@ -1,10 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
-<<<<<<<< HEAD:.www/admin/Main.php
-	<meta name="viewport" content="width=device-width, initial-scale=.5">
-========
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
 body {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
@@ -646,20 +642,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                        <a href="dashboard.php" class="hex-content">
-========
                                         <a href="request.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
                                                 </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">ADMIN</span>
-========
-                                                <span class="title">REQUEST FORM</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
+                                                <span class="title">COMING SOON</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -675,22 +663,14 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                        <a href="../.=/tierone/index.php" class="hex-content">
-========
                                         <a href="tele.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bullseye"></i>
                                                 </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">TIER ONE</span>
-========
                                                 <span class="title">JOIN TELEGRAM</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -704,22 +684,14 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                        <a href="../.=/tiertwo/index.php" class="hex-content">
-========
-                                        <a href="send.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
+                                        <a href="contact.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
                                                 </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">TIER TWO</span>
-========
-                                                <span class="title">SEND ETRANSFER REQUEST</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
+                                                
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
                                         </a>    
                                     </div>
                                     <div class="hexagon-item">
@@ -733,23 +705,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                        <a href="../.=/tierthree/index.php" class="hex-content">
-========
-                                        <a href="access.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-id-badge"></i>
-                                                </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">TIER THREE</span>
-========
-                                                <span class="title>REQUEST MORE ACCESS</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
+                                        
                                     </div>
                                     <div class="hexagon-item">
                                         <div class="hex-item">
@@ -762,22 +718,9 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
                                         <a href="../.=/tierfour/index.php" class="hex-content">
-========
-                                        <a href="idea.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-life-ring"></i>
-                                                </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">TIER FOUR</span>
-========
-                                                <span class="title">GOT AN IDEA?</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            
+                                            
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -791,22 +734,9 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
                                         <a href="../.=/builder/index.php" class="hex-content">
-========
-                                        <a href="contact.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-clipboard"></i>
-                                                </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">SITE BUILDER</span>
-========
-                                                <span class="title">CONTACT INFORMATION</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            
+                                            
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -820,22 +750,9 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-<<<<<<<< HEAD:.www/admin/Main.php
                                         <a href="../.=/restricted_area/index.php" class="hex-content">
-========
-                                        <a href="logout.php" class="hex-content">
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-map-signs"></i>
-                                                </span>
-<<<<<<<< HEAD:.www/admin/Main.php
-                                                <span class="title">RESTRICTED AREA</span>
-========
-                                                <span class="title">LOG-OUT</span>
->>>>>>>> 5cf96fe71510912bc4974ef3763b94e3d4c3229f:.pages/xbox/.=/tierone/index.php
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            
+                                            
                                         </a>
                                     </div>
                                 </div>
