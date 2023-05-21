@@ -642,12 +642,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="profile.php" class="hex-content">
+                                        <a href="dashboard.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Profile lists</span>
+                                                <span class="title">ADMIN</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -663,12 +663,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../public/Google/GO.php" class="hex-content">
+                                        <a href="../.=/tierone/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bullseye"></i>
                                                 </span>
-                                                <span class="title"> Location Generator</span>
+                                                <span class="title">TIER ONE</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -684,12 +684,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../public/Google/GO1.php" class="hex-content">
+                                        <a href="../.=/tiertwo/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
                                                 </span>
-                                                <span class="title">Google Drive Generateor</span>
+                                                <span class="title">TIER TWO</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>    
@@ -705,12 +705,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../public/deposit/manual.php" class="hex-content">
+                                        <a href="../.=/tierthree/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
                                                 </span>
-                                                <span class="title">TRANSFER GENERATOR</span>
+                                                <span class="title">TIER THREE</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -726,12 +726,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="/public/tswift/taco.php" class="hex-content">
+                                        <a href="../.=/tierfour/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-life-ring"></i>
                                                 </span>
-                                                <span class="title">TRANSFER REQUEST FORM</span>
+                                                <span class="title">TIER FOUR</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -747,12 +747,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="/admin/info.php" class="hex-content">
+                                        <a href="../.=/builder/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">PROFILE INFORMATION FORM</span>
+                                                <span class="title">SITE BUILDER</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -768,12 +768,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="/admin/frosting.php" class="hex-content">
+                                        <a href="../.=/restricted_area/index.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-map-signs"></i>
                                                 </span>
-                                                <span class="title">FROSTING CENTER</span>
+                                                <span class="title">RESTRICTED AREA</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
