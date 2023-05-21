@@ -1,0 +1,41 @@
+*, html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content .loader {
+    margin-bottom: 30px;
+}
+
+.content .loader img {
+    width: 64px;
+}
+
+.content .logo img {
+    width: 150px;
+}
+
+.content .logo .visa {
+    width: 80px;
+}
+
+@media screen and (max-width: 375px) {
+    .content .logo img {
+        width: 350px;
+    }
+
+    .content .logo .visa {
+        width: 180px;
+    }
+}

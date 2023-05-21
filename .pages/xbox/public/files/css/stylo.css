@@ -1,0 +1,68 @@
+.bg-pattern{
+    background-image: url(../images/107100.png)!important;
+}
+
+.logo-sm{
+    margin-left: -10px}
+
+.logo-lg> img{
+    margin-top: 10px!important;
+}
+
+.main-content{
+    background-image: url(../images/107100.png);
+    background-position: top center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width:768px){
+.main-content{
+    background-image: url(../images/107100.jpg);
+    background-position: 00px 00px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100% 100%; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+}
+}
+
+@media only screen and (max-width:425px){
+.main-content{
+    background-image: url(../images/849215.jpg);
+    background-position: top center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+}
+}
+
+.rsa-textfield{
+    margin-bottom: 17.5px;
+}
+
+.smack{
+    color: white!important;
+}
+
+.givenchy{
+    margin-top: 15px;
+}
+
+.show-face{
+    display: none;
+}
+
+@media only screen and (max-width:425px){
+.show-face{
+    display: block;
+}
+}
+
+.botinho{
+    background: rgba(191,102,43,0.5);
+    border-radius: 15px;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}

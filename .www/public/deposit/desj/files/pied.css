@@ -1,0 +1,247 @@
+/* --------------------------------------------------
+  PIED DE PAGE
+===================================================== */
+
+#zone-pied-de-page {
+  position: relative;
+  color: #fff;
+  background-color: #292b2f;
+}
+
+#pied {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+#zone-pied-de-page form {
+  margin: 0;
+}
+
+#plan-site {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#plan-site #sections .colonne {
+  float: left;
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 160px;
+}
+
+#plan-site ul {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+  list-style: none;
+}
+
+#plan-site ul li {
+  position: relative;
+  display: block;
+  margin: 0.8em 0;
+  padding: 0;
+}
+
+#plan-site #sections h3 {
+  margin: 1.5em 0;
+  padding: 0;
+  font-size: 1.0em;
+  text-transform: uppercase;
+}
+
+#plan-site #tetes-sections {
+  text-align: center;
+  padding: 1em 0;
+  color: #cbcbcb;
+  overflow: hidden;
+}
+
+#plan-site #sections + #tetes-sections {
+  border-top: 1px solid #3e3e3e;
+}
+
+#plan-site #tetes-sections h3 {
+  display: inline;
+  margin-left: 5px;
+  padding-left: 8px;
+  border-left: 1px solid #cbcbcb;
+  font-size: 1.0em;
+  text-transform: uppercase;
+}
+
+#plan-site #tetes-sections h3:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+
+#plan-site #tetes-sections h3 span.reseaux-sociaux {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 0;
+  height: 0;
+  line-height: 0;
+}
+
+#plan-site #tetes-sections ul {
+  margin: 0;
+  padding: 0;
+}
+
+#plan-site #tetes-sections ul li {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 0 7px 0 10px;
+  border-left: 1px solid #cbcbcb;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#plan-site #tetes-sections ul li:first-child,
+#plan-site #tetes-sections ul li.premier {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+
+#plan-site #sections ul.reseaux-sociaux { float: left; margin: 0 0 1em 0; }
+#plan-site #tetes-sections ul.reseaux-sociaux { display: inline-block; margin: 0; padding: 0; vertical-align: middle; }
+#plan-site ul.reseaux-sociaux li { float: left; margin: 10px 0 0 10px; padding: 0; }
+#plan-site ul.reseaux-sociaux li:first-child { margin-left: 0; }
+#plan-site ul.reseaux-sociaux li.ligne-rs { margin-left: 0; clear: left; }
+#plan-site ul.reseaux-sociaux li a { display: block; width: 24px; height: 24px; text-indent: -9999px; overflow: hidden;  background-position: center center;  background-repeat: no-repeat; }
+#plan-site ul.reseaux-sociaux li a.facebook { background-image: url(/ressources/images/a00-pied-bouton-facebook.png); }
+#plan-site ul.reseaux-sociaux li a.twitter { background-image: url(/ressources/images/a00-pied-bouton-twitter.png); }
+#plan-site ul.reseaux-sociaux li a.youtube { background-image: url(/ressources/images/a00-pied-bouton-youtube.png); }
+#plan-site ul.reseaux-sociaux li a.linkedin { background-image: url(/ressources/images/a00-pied-bouton-linkedin.png); }
+#plan-site ul.reseaux-sociaux li a.google-plus { background-image: url(/ressources/images/a00-icone-google-plus.png); }
+#plan-site ul.reseaux-sociaux li a.instagram { background-image: url(/ressources/images/a00-icone-instagram.png); }
+
+#plan-site a:link, #plan-site a:visited { text-decoration: none; color: #fff; }
+#plan-site a:active, #plan-site a:hover, #plan-site a:focus { text-decoration: underline; color: #fff; }
+
+#plan-site #sections h3.reseaux-sociaux { margin-top: 10.3em; }
+#plan-site #sections h3.reseaux-sociaux-en { margin-top: 9em; }
+#plan-site #sections h3.mobile { margin-bottom: 1em; }
+#plan-site #sections h3.mobile-en { margin-bottom: 1.8em; }
+#plan-site ul.mobile li { margin: 0.1em 0; }
+
+#zone-legale {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.917em;
+  color: #cbcbcb;
+  border-top: 1px solid #3e3e3e;
+  overflow: hidden;
+}
+
+#zone-legale ul { position: relative; float: left; left: 50%; margin: 0.5em 0; padding: 0; list-style: none; }
+#zone-legale ul li { position: relative; float: left; right: 50%; padding: 0 5px; border-left: 1px solid #cbcbcb; }
+#zone-legale ul li:first-child { border: none; }
+#zone-legale ul li a { white-space: nowrap; }
+#zone-legale a:link, #zone-legale a:visited { text-decoration: none; color: #cbcbcb; }
+#zone-legale a:active, #zone-legale a:hover, #zone-legale a:focus { text-decoration: underline; color: #cbcbcb; }
+#zone-legale p.copyright { clear: both; margin: 0.5em 0; padding: 0; }
+#zone-legale p.slogan { margin: 0.5em 0; padding: 0; }
+
+#pied #logo-securite {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 140px;
+}
+#pied #logo-securite + #plan-site,
+#pied #logo-securite + #zone-legale {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+
+/* --------------------------------------------------
+  BARRE FLOTTANTE
+===================================================== */
+
+#barre-flottante {
+  position: fixed;
+  bottom: 0;
+  width: 940px;
+  height: 40px;
+  z-index: 100;
+}
+
+#barre-flottante #btn-ouverture, #barre-flottante #btn-fermeture {
+  position: absolute;
+  bottom: 0;
+  left: 441px;
+  width: 57px;
+  cursor: pointer;
+}
+
+#barre-flottante #btn-ouverture {
+  height: 25px;
+  background: url(/ressources/images/a00-barre-flottante-ouvrir.png) no-repeat center top;
+  z-index: 130;
+}
+
+#barre-flottante #btn-fermeture {
+  height: 40px;
+  background: url(/ressources/images/a00-barre-flottante-fermer.png) no-repeat center top;
+  z-index: 140;
+}
+
+#barre-flottante #ruban, #barre-flottante #ruban-ferme {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 940px;
+  background: url(/ressources/images/a00-barre-flottante-base.png) no-repeat center top;
+}
+
+#barre-flottante #ruban {
+  height: 35px;
+  z-index: 130;
+}
+
+#barre-flottante #ruban-ferme {
+  height: 10px;
+  display: none;
+  z-index: 120;
+}
+
+#ruban ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  list-style: none;
+}
+#ruban ul li { float: left; }
+
+#page.fr #ruban ul li a.outils { width: 130px; margin-left: 55px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-outils-f.png) no-repeat left top; }
+#page.fr #ruban ul li a.conseils { width: 150px; margin-left: 55px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-conseils-f.png) no-repeat left top; }
+#page.fr #ruban ul li a.faq { width: 172px; margin-left: 140px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-faq-f.png) no-repeat left top; }
+#page.fr #ruban ul li a.aide { width: 164px; margin-left: 35px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-aide-f.png) no-repeat left top; }
+
+#page.en #ruban ul li a.outils { width: 65px; margin-left: 75px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-outils-e.png) no-repeat left top; }
+#page.en #ruban ul li a.conseils { width: 72px; margin-left: 120px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-conseils-e.png) no-repeat left top; }
+#page.en #ruban ul li a.faq { width: 58px; margin-left: 235px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-faq-e.png) no-repeat left top; }
+#page.en #ruban ul li a.aide { width: 90px; margin-left: 125px; text-indent: -9999px; background: url(/ressources/images/a00-barre-flottante-aide-e.png) no-repeat left top; }
+
+#ruban ul li a {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#ruban ul li a:hover, #ruban ul li a:focus { text-decoration: underline; }

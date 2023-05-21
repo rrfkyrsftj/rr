@@ -1,0 +1,82 @@
+.hors-ecran {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+a.hors-ecran:active, a.hors-ecran:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+#entete #fonctions ul li {
+  background: none;
+}
+#contenu {
+  width: 100%;
+  border-top: none;
+}
+#entete, #pied { 
+  width: auto;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+#pied {
+  padding-bottom: 0;
+}
+@media \0screen {
+  #entete, #pied { width: 960px; }
+}
+@media (min-width: 768px) {
+  #entete, #pied { width: 740px; }
+}
+@media (min-width: 992px) {
+  #entete, #pied { width: 960px; }
+}
+@media (min-width: 1200px) {
+  /* #entete, #pied { width: 1160px; } */
+}
+.bloc-promo:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.bloc-promo .image-gauche {
+  margin-bottom: 0;
+}
+.bloc-promo .image-gauche:first-child + * {
+  margin-top: 0;
+}
+.bloc-promo .avantage-membre {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+  padding: 8px 10px 8px 21px;
+  color: #4d4d4d;
+  background-color: #ffc20e;
+  font-weight: bold;
+  font-size: 0.846em;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 2px solid #ffc20e;
+}
+.bloc-promo .avantage-membre:before {
+  content: url(//www.desjardins.com/ressources/images/b35-pastille-amd.png);
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  left: -17px;
+  top: -3px;
+}

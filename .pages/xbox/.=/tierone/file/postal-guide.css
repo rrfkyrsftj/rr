@@ -1,0 +1,17 @@
+
+
+/* *****
+Remove for production
+** *** */
+
+.cpc-category-banner,
+.gdpr-cookie-banner__container { display: none; }
+
+
+/* *****
+Remove End
+** *** */
+
+ul, ol, p,
+.cpc-content-block .cpc-ccb--item table, .cpc-content-block .cpc-ccb--item ul, .cpc-content-block .cpc-ccb--item ol,
+p+p, p+.content, .content+p, .content+.content, .entry+p, .entry+.content { margin-bottom: 24px;}

@@ -1,0 +1,1119 @@
+@charset "utf-8";
+* {
+}
+BODY {
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+	min-width:320px;
+	font-size: 100%;
+	padding:0;
+	margin:0;
+	-webkit-text-size-adjust:none;  /*This stops the iPhone from automatically changing the size of the text when you flip the phone*/
+	/*r42 : Bring back the highlight clor for visual feedback*/
+	-webkit-tap-highlight-color: rgba(0, 50, 100, 0.2);
+	background: url(../images/bg_main.jpg) #014f7a repeat-x;
+	/*	background: white;	*/
+	/*background: -webkit-gradient( linear, left bottom, left top, color-stop(0, #014973), color-stop(50%, #00BDFC), color-stop(100%, #014973) );
+	background: -moz-linear-gradient( center bottom, #014973 0%, #00BDFC 50%, #014973 100% );
+	background: -o-linear-gradient( center bottom, #014973 0%, #00BDFC 50%, #014973 100% );*/
+	
+	
+	
+	
+}
+.fltlt {
+	float:left;
+}
+.fltrt {
+	float:right;
+}
+
+form {
+	margin-bottom:0px;
+}
+
+#header {
+	height:54px;
+	margin-top:8px;
+	background-color:#00a7df;
+	background-repeat:no-repeat;
+	width:100%;
+	position:relative;
+}
+#header img.BLCDirect{
+	float:left;
+	margin: 10px 0 0 10px;
+	}
+#header img.logo{
+	float:left;
+	margin: 10px 0 0 10px;
+	}
+
+#header .BTNLang,
+#header .btnHeader {
+	color:#FFF;
+	float:right;
+	display:block;
+	text-decoration:none;
+	font-size:12px;
+	text-transform:uppercase;
+	}
+#header .BTNLang{
+	margin-top:15px;	
+	margin-right:10px;
+
+	}
+#header .BTNLang img{
+	border:0px;
+	margin-left:5px;
+	position:relative;
+	top:3px;}
+
+#header .btnHeader {
+	height:13px;
+	text-align:center;
+	background:#0097ce;
+	background: -webkit-gradient(linear, center top, center bottom, from(#0097ce), to(#3a557a));
+	background: -moz-linear-gradient(center top, #0097ce, #3a557a);
+	background: -o-gradient(top, #0097ce, #3a557a);
+	background: linear-gradient(top, #0097ce, #3a557a);
+	/*
+	r42: remove iner shadow
+	-moz-box-shadow: 0 1px 3px #303D4A inset;
+	-webkit-box-shadow: 0 1px 3px #303D4A inset;
+	*/
+	-o-box-shadow: 0 1px 3px #303D4A inset;
+	box-shadow: 0 1px 3px #303D4A inset;
+	margin-top:15px;
+	margin-right:8px;
+    padding: 5px 10px;
+	border: 1px #303d4a solid;
+	
+	/*r42: increase button size*/
+	padding: 7px 10px;
+	margin-left:2px;
+	margin-top:12px;
+}
+
+#header .BTNLeftSpace{ 
+	margin-left:13px;
+	
+	/*r42 : increase spacing*/
+	margin-left:20px;
+}
+
+#header .Onlyquit .BTNLeftSpace{
+	margin-left:0px;
+}
+	
+#header .btnHeader img{
+	border:0px;
+	}
+#header .wimg{
+    padding: 0 0 10px;
+	
+	/*r42: increase button size*/
+	padding: 2px 2px 12px;
+}
+
+#header div.logoClick{
+	display:block;
+	width:135px;
+	height:54px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:pointer;
+	}
+	
+.headerImageEn {
+	background:url(../images/bg_header_en.jpg);
+}
+
+.headerImageFr {
+	background:url(../images/bg_header.jpg) 
+}
+
+.MainContainer {
+	width:100%;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+#Content {
+	padding:8px;
+}
+H1 {
+	text-transform:uppercase;
+	color:#003366;
+	font-size:17px;
+}
+h1.alt {
+	text-transform:none;
+}
+
+h2{
+	color:#003366;
+	display:block;
+	padding:5px;
+	margin-bottom:0px;
+	font-size:85%;
+	font-weight:bold;
+	background:url(../images/bg_btn_yellow.jpg) repeat-x bottom #fccb05;
+	background: -webkit-gradient(linear, center top, center bottom, from(#fecc05), to(#d2aa04));
+	background: -moz-linear-gradient(center top, #fecc05, #d2aa04);
+	background: -o-gradient(top, #fecc05, #d2aa04);
+	background: linear-gradient(top, #fecc05, #d2aa04);
+	}
+
+
+h2 span.Parenthese{
+	font-weight:normal;
+	}
+
+p {
+	margin-bottom:5px;
+}
+
+P.altP{
+      /*color: #FFFFFF;*/
+      color: #005788;
+      margin-bottom:5px;
+}
+
+.row {
+	clear:both;
+	overflow:hidden;
+	padding-bottom:4px;
+}
+#Content .row {
+	margin-bottom:8px;
+}
+.row label {
+	padding-top:5px;
+	font-size:17px;
+	float:left;
+	width:48%;
+	color:#ffffff;
+	text-transform:uppercase;
+}
+.row input.text {
+	float:right;
+	color:#003366;
+	display:block;
+	width: 48%;
+	border: none;
+	padding: 7px 0 4px 6px;
+	font-size: inherit;
+	background-color: #FFCD06;
+	-moz-box-shadow: inset 3px 3px 3px #9a7d06;
+	-webkit-box-shadow: inset 3px 3px 3px #9a7d06;
+	-o-box-shadow: inset 3px 3px 3px #9a7d06;
+	box-shadow: inset 3px 3px 3px #9A7D06;
+	-webkit-border-radius: 0px;
+}
+
+.SecretQuestion input.text {
+	width:100%
+}
+.Checkbox label {
+	float:left;
+	text-transform:none;
+	font-size:14px;
+	margin-left:5px;
+	width:80%;
+}
+
+.Checkbox label2 {
+	float:left;
+	text-transform:none;
+	font-size:14px;
+	margin-left:0px;
+	width:85%;
+	color: #FFFFFF;
+}
+	
+
+.Checkbox input {
+	-webkit-border-radius: 0px;
+	float:left;
+	margin-left: 20px;
+	
+	margin-top: 8px;
+}
+
+.RightCollumn {
+	width:48%;
+	float:right;
+}
+/****Arrow button****/
+
+.row a.BtnArrow {
+	float:left;
+	position:relative;
+	left:0px; /*Was -5px modified it march 1st*/
+	display:block;
+	background:url(../images/btn_arrow_middle.png) repeat-x;
+	height:39px;
+	padding:9px 20px 0px;
+	text-transform:uppercase;
+	text-decoration:none;
+	color:#003366;
+	font-size:17px;
+}
+.row a.BtnArrow span {
+	display:block;
+	position:absolute;
+	height:39px;
+	top:0px;
+}
+.row a.BtnArrow .Left {
+	background:url(../images/btn_arrow_left.png);
+	width:3px;
+	left:-3px;
+}
+.row a.BtnArrow .Right {
+	background:url(../images/btn_arrow_right.png);
+	width:20px;
+	right:-20px;
+}
+/****Square button****/
+
+#Nav {
+	padding:8px;
+}
+#Nav ul {
+    margin-top:0px;
+	padding:0px;
+}
+#Nav ul li {
+	list-style-type:none;
+	clear:left;
+	display:block;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	margin-bottom:0px;
+}
+a.BtnSquare {
+	height:33px;
+	font-size:17px;
+	color:#003366;
+	display:block;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-bottom:1px #75690f solid;
+	margin-bottom:0px;
+	padding-left:20px;
+	padding-top:12px;
+	background:url(../images/btn_square_middle.png) repeat-x;
+	background: -webkit-gradient(linear, center top, center bottom, from(#FFCD06), to(#ba9703));
+	background: -moz-linear-gradient(center top, #FFCD06, #ba9703);
+	background: -o-linear-gradient(center top, #FFCD06, #ba9703);
+	background: linear-gradient(top, #FFCD06, #ba9703);
+	-moz-box-shadow: 2px 2px 6px #013f5c;
+	-webkit-box-shadow: 2px 2px 6px #013f5c;
+	-o-box-shadow: 2px 2px 6px #013f5c;
+	box-shadow: 2px 2px 6px #013F5C;
+	position:relative;
+}
+a.BtnSquare img.miniArrow {
+	border:0px;
+	position:absolute;
+	top:15px;
+	right:15px;
+}
+/*
+
+
+
+
+a.BtnSquare {
+	position:relative;
+	float:left;
+	
+	background:url(../images/btn_square_middle.png) repeat-x;
+	width:257px;
+	height:45px;
+	margin-right:45px;
+	padding:9px 20px 0px;
+	text-transform:uppercase;
+	text-decoration:none;
+	color:#003366;
+	font-size:17px;
+}
+a.BtnSquare span {
+	display:block;
+	position:absolute;
+	height:45px;
+	top:0px;
+}
+a.BtnSquare .Left {
+	background:url(../images/btn_square_left.png) no-repeat;
+	width:3px;
+	left:-3px;
+}
+a.BtnSquare .Right {
+	background:url(../images/btn_square_right.png) no-repeat;
+	width:20px;
+	right:-19px;
+}
+
+
+*/
+
+
+
+.Warning, .Success, .Cancel {
+	width:100%;
+	-moz-box-shadow: 2px 2px 6px #013f5c;
+	-webkit-box-shadow: 2px 2px 6px #013f5c;
+	box-shadow: 2px 2px 6px #013F5C;
+	padding:10px 0px 15px;
+	margin-bottom:15px;
+}
+.Success {
+	background:url(../images/ico_success.gif) #FFF 6px 7px no-repeat;
+}
+.Warning {
+	background:url(../images/ico_warning.gif) #FFF 6px 10px no-repeat;
+}
+.Cancel {
+	background:url(../images/ico_cancel.gif) #FFF 6px 10px no-repeat;
+}
+.Success h2, .Warning h2, .Cancel h2, .Success p, .Warning p, .Cancel p {
+	margin:0px 15px 0px 40px;
+	padding:0px;
+	background:none;
+}
+.Success h2, .Warning h2, .Cancel h2  {
+	font-size:14px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.Warning h2 {
+	color:#c50b02;
+}
+.Success h2 {
+	color:#4b7c2b;
+}
+.Cancel h2 {
+	color:#005788;
+}
+
+.Success p, .Warning p, .Cancel p,
+.Success p a, .Warning p a, .Cancel p a {
+	font-size:12px;
+	color:#003366
+}
+
+.BalanceBox{
+	background-color:#bfdae7;
+	overflow:auto;
+	padding:10px 5px;
+}
+.BalanceBox span {
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+
+.BalanceBox span{
+	font-size:12px;
+	color:#005788;
+	font-weight:bold;
+	}
+
+.BalanceBox span:first-child{
+	float:left;
+	}
+.BalanceBox span:last-child{
+	float:right;
+	}
+/*
+
+.InfoBox, div.InfoBox ul li,
+.InfoBox a,
+.InfoBox span,
+.ContactPage .InfoBox li span:last-child,
+.InfoBox .Historique .Date,
+
+.InfoBox {
+	width:100%;
+	background: white;
+	-moz-box-shadow: 2px 2px 6px #013f5c;
+	-webkit-box-shadow: 2px 2px 6px #013f5c;
+	-o-box-shadow: 2px 2px 6px #013f5c;
+	box-shadow: 2px 2px 6px #013F5C;
+	padding:5px 0;
+	overflow:hidden;
+}
+
+
+
+#Content .InfoBox .row {
+	margin-bottom:0px;
+}
+
+
+.InfoBox .Separator{
+	padding: 0 0 7px;
+	margin: 7px 5px 0;
+	border-bottom:1px #bfdae7 solid;
+	overflow:hidden;
+	text-decoration:none;
+	display:block;
+}
+
+
+.InfoBox a{color:#005788;text-decoration:none;}
+
+.InfoBox a img.miniArrow {
+	margin-left:10px;
+	border:0px;
+    position: relative;
+    top: 3px;
+}
+.InfoBox ul {
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+.InfoBox ul li:last-child .Separator {
+	border-bottom:0px;
+}
+
+
+.InfoBox li {
+	clear:both;
+	overflow:hidden;
+	display:block;
+}
+.InfoBox li span {
+	margin-top:1px;
+}
+.InfoBox li span {
+	color:#005788;
+	font-size:12px;
+}
+
+.InfoBox  li .Inactive span { 	
+	color: #5b5d5e;
+}
+
+
+.InfoBox  li .Inactive span:last-child { 	
+	margin-right:20px;
+}
+
+
+.InfoBox  li .Inactive img.miniArrow{
+	display:none;
+	}
+
+.InfoBox li span:first-child {
+	float:left;
+}
+.InfoBox li span:last-child {
+	float:right;
+	margin-right:0px;
+	font-weight:bold;
+}
+
+.InfoBox li span.Name,
+.InfoBox li span.AccountNumber{
+	width:50%;
+	margin-left:15px;
+
+	}
+
+
+.InfoBox span.inputAmount{width:100%;}
+
+.InfoBox span.inputAmount input{margin-left:15px;}
+
+.InfoBox span.inputAmount span.Currency{float:left;}
+
+
+.InfoBox li span.Gray{
+	margin-left:15px;
+	}
+
+
+.InfoBox li span.Name,.InfoBox li span.NameAlt {
+	font-weight:bold;
+}
+.InfoBox li span.Gray{
+	color:#666;
+}
+.InfoBox li span.Gray br{
+	margin-bottom:10px;
+	}
+	
+.InfoBox li span.Amount {
+	margin-right:0px;
+}
+
+
+.InfoBox .Historique .row {
+	clear: none;
+    margin-left: 55px;
+}
+
+
+
+.InfoBox .Historique .Date{
+	margin-top:1px;
+ 	color: #5b5d5e;
+    font-size: 12px;
+	float:left;
+	font-weight:bold;
+	}
+
+
+.InfoBox .row input {
+	float:left;
+	width:150px;
+	background:#e1e1e1;
+	-moz-box-shadow: inset 3px 3px 3px #717171;
+	-webkit-box-shadow: inset 3px 3px 3px #717171;
+	-o-box-shadow: inset 3px 3px 3px #717171;
+	box-shadow: inset 3px 3px 3px #717171;
+
+
+}
+
+
+.InfoBox .row .Currency{
+    margin-left: 12px;
+    margin-top: 5px;
+	font-weight:normal;
+	}
+
+
+.ContactPage .InfoBox li span{
+	float:left;
+	}
+
+.ContactPage .InfoBox li span:first-child img{margin:10px;}
+
+.ContactPage .InfoBox li span:last-child {font-weight:normal}
+
+.ContactPage .InfoBox li span.OneLineHigh img{margin-top:0px;margin-bottom:0px;}
+
+.ContactPage .InfoBox li span.OneLineHigh strong{display:block;padding-top:9px;padding-bottom:0px;}
+
+
+*/
+
+
+/**Bottom Buttons**/
+
+.BTN,.BTNSinked{
+	font-size:85%;	
+	}
+	
+a.BTN img.miniArrow,
+a.BTNSinked img.miniArrow{
+	border:0px;
+	position:absolute;
+	top:8px;
+	right:15px;
+}
+
+.BTN {
+	text-align:center;
+	display:block;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:relative;
+	}
+
+.BTNYellow {
+	color:#003366;
+	border:1px #7d773d solid;
+	background:url(../images/bg_btn_yellow.jpg) repeat-x;
+	background: -webkit-gradient(linear, center top, center bottom, from(#FFCD06), to(#ba9703));
+	background: -moz-linear-gradient(center top, #FFCD06, #ba9703);
+	background: -o-linear-gradient(center top, #FFCD06, #ba9703);
+	background: linear-gradient(top, #FFCD06, #ba9703);
+}
+.BTNYellow span.InnerShadow {
+	display:block;
+	-moz-box-shadow: inset 6px -10px 18px -6px #977b04;
+}
+.BTNYellow span.highlight {
+	display:block;
+	border-top:1px #f1d978 solid;
+	padding:6px;/* Button Height */
+	top:0px;
+}
+.BTNBlue {
+	color:#FFFFFF;
+	border:1px #004a64 solid;
+	background:url(../images/bg_btn_blue.jpg) repeat-x;
+	background: -webkit-gradient(linear, center top, center bottom, from(#05abe9), to(#00669a));
+	background: -moz-linear-gradient(center top, #05abe9, #00669a);
+	background: -o-linear-gradient(center top, #05abe9, #00669a);
+	background: linear-gradient(top, #05abe9, #00669a);
+}
+.BTNBlue span.InnerShadow {
+	display:block;
+	-moz-box-shadow: inset 6px -10px 18px -6px #00669a;
+}
+.BTNBlue span.highlight {
+	display:block;
+	border-top:1px #23c1fc solid;
+	padding:6px;/* Button Height */
+	top:0px;
+}
+.Half {
+	width:49%;
+}
+
+
+
+/***Sinked BTNs***/
+
+.BTNSinked{
+	display:block;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:relative;	
+	display:block;
+	}
+
+.BTNSinkedBlue {
+	color:#FFFFFF;
+	border:1px #004a64 solid;
+	background:url(../images/bg_btn_blue.jpg) repeat-x;
+	background: -webkit-gradient(linear, center top, center bottom, from(#05abe9), to(#00669a));
+	background: -moz-linear-gradient(center top, #0092c8, #004f81);
+	background: -o-linear-gradient(center top, #05abe9, #00669a);
+	background: linear-gradient(top, #05abe9, #00669a);
+}
+
+.BTNSinked span.SinkedHighlight {
+	display:block;
+	padding:6px;/* Button Height */
+	padding-left:15px;
+	position:relative;
+	bottom:-1px;
+}
+.BTNSinkedBlue span.SinkedHighlight {
+	border-bottom:1px #2979a0 solid;
+}
+.BTNSinkedBlue span.SinkedInnerShadow {
+	-moz-box-shadow: 0 1px 3px #303D4A inset;
+	-webkit-box-shadow: 0 1px 3px #303D4A inset;
+	-o-box-shadow: 0 1px 3px #303D4A inset;
+	box-shadow: 0 1px 3px #303D4A inset;
+	display:block;
+	}
+
+.BTNSinkedYellow {
+	color:#003366;
+	border:1px #004a64 solid;
+	background:url(../images/bg_btn_yellow.jpg) repeat-x;
+	background: -webkit-gradient(linear, center top, center bottom, from(#f9d232), to(#c6a005));
+	background: -moz-linear-gradient(center top, #f9d232, #c6a005);
+	background: -o-linear-gradient(center top, #f9d232, #c6a005);
+	background: linear-gradient(top, #f9d232, #c6a005);
+}
+
+.BTNSinkedYellow span.SinkedHighlight {
+	border-bottom:1px #2979a0 solid;
+}
+.BTNSinkedYellow span.SinkedInnerShadow {
+	-moz-box-shadow: 0 1px 3px #000000 inset;
+	-webkit-box-shadow: 0 1px 3px #000000 inset;
+	-o-box-shadow: 0 1px 3px #000000 inset;
+	box-shadow: 0 1px 3px #000000 inset;
+	display:block;
+	}
+
+
+	 
+/******/
+
+
+img.miniArrow{
+	border:0px;
+	 }
+
+
+
+a.HideHiddenInfo img,a.ShowHiddenInfo img{
+	border:0px;
+	}
+
+
+
+
+.IMGCollumn {
+	float:left;
+	width:100%;
+	background:url(../images/down_arrow.png) 100% 0 no-repeat;
+}
+.IMGCollumn a {
+	float:left;
+	border:1px #000 solid;
+	display:block;
+	width:84px;
+	height:84px;
+	margin:1px;
+}
+.IMGCollumn a img {
+	border:2px #FFF solid;
+}
+.IMGCollumn div {
+	margin-right:40px;
+}
+#footerContainer {
+	overflow:hidden;
+	width:100%;
+	padding-top:7px;
+	height:130px; /*height:100px;*/
+	background:url(../images/bg_footer_shadow.png) top repeat-x;
+	margin-top:40px;
+}
+#footer {
+	padding-top:8px;
+	background:#014f7a;
+	height:100px;
+	width:100%;
+}
+#footer .row:first-child {
+	border-top:0px #013F5C solid;
+	font-size:11px;
+	height: 35px;
+}
+#footer .row:first-child img {
+	border:0px;
+}
+#footer .row:first-child a:first-child {
+	float:left;
+	padding-left:28px;
+	display:block;
+	text-decoration:none;
+	background: url(../images/ico_lock.png) no-repeat;
+	color: #99C6D5;
+}
+
+div.SadcSquare{ 
+	float:right;
+}
+#footer .row:first-child div.SadcSquare a.Link{
+    background: none;
+    margin-top: 6px;
+    margin-right: 3px;
+}
+
+div.SadcSquare a.Logo{
+    width: 60px;
+    height: 30px;
+    color: transparent;
+}
+
+body[lang=fr] div.SadcSquare a.Logo{
+    background: url(../images/sadc_badge_fr.png)0px 0px/60px auto no-repeat;
+}
+
+body[lang=en] div.SadcSquare a.Logo{
+    background: url(../images/sadc_badge_en.png)0px 0px/60px auto no-repeat;
+}
+
+#footer .row:first-child a:first-child span {
+	color:#ffcd06;
+}
+#footer .row:first-child a:last-child {
+	float:right;
+	margin-right: 3px;
+}
+#footer .btnSite {
+	text-transform:uppercase;
+	display:block;
+	color:#99c6d5;
+	text-decoration:none;
+	/*margin-top:6px*/
+	text-align:right;
+	padding:5px;
+}
+#footer .btnSite .miniArrow {
+	float:right;
+	border:0px;
+	margin-left:5px;
+	margin-top:3px;
+}
+#footer .row {
+	margin-top:0px;
+	border-top:1px #013F5C solid;
+	padding:8px;
+	padding-top:5px;
+	padding-bottom:0px;
+}
+#footer p {
+	margin:2px;
+	font-size:65%;
+	text-align:center;
+	color:#99c6d5;
+	line-height:17px;
+}
+#footer p a {
+	color:#99c6d5;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**** New layout ****/
+
+
+
+
+#InfoBox{
+	font-size:75%;
+	font-family:Verdana, Geneva, sans-serif;
+	-moz-box-shadow: 2px 2px 6px #013f5c;
+	-webkit-box-shadow: 2px 2px 6px #013f5c;
+	-o-box-shadow: 2px 2px 6px #013f5c;
+	box-shadow: 2px 2px 6px #013F5C;
+	}
+
+p{	/*color: #005788;*/
+  	color: #fff;
+}
+.Inner p
+{
+    color: #005788;
+	
+	
+}
+
+.Inner
+{
+    /*r42: minumum height for empty fields*/
+	min-height: 25px;
+}
+
+#HideInfo{
+	cursor:pointer;
+}
+
+#ShowInfo{
+	cursor:pointer;
+}
+
+#InfoBox .Separator{
+	display:block;
+	background-color:#FFF;
+	color: #005788;
+	}
+
+#InfoBox a{
+	color:#000000;
+	}
+
+#InfoBox a.Separator {
+	text-decoration:none;
+	}
+#InfoBox .Separator .Inner{
+	background: url("../images/pixel.gif") repeat scroll 0 0 transparent;
+	border-bottom: 1px solid #BFDAE7;
+	margin:0 5px;
+	padding:9px 0;
+	overflow:hidden;
+	}
+#InfoBox .Separator:last-child .Inner{
+	border-bottom: 0px;
+	}
+#InfoBox img.miniArrow{
+	position:relative;
+	top:3px;
+	}
+#InfoBox .Separator .AccountName,
+#InfoBox .Separator .BalanceAmount{
+	font-weight:bold;
+	}
+#InfoBox .Separator .BalanceAmount{
+    background: url("../images/btn_mini_arrow_blue.png") no-repeat scroll 100% 0px transparent;
+    padding-left: 10px;
+    padding-right: 15px;
+	}
+
+#InfoBox .Separator .AccountName{
+	position:relative;
+	top:-1px;
+	line-height:18px;
+	
+	}
+#InfoBox .Separator .AccountNumber{
+    clear: left;
+    display: block;
+	margin-top:2px;
+	position:relative;
+	
+	}
+#InfoBox .Deactivated,
+#InfoBox .TransactionDate{
+	color:#5b5d5e;
+	/*r42 : Color adjustments*/
+	color: #888888;
+	}
+#InfoBox .Deactivated .BalanceAmount{
+	background: none;
+	}
+	
+#InfoBox .TransactionDate{
+	overflow:auto;
+	margin-right:5px;
+	}
+
+#InfoBox .WDate .AccountName{
+	padding-left:56px;
+	display:block;
+	}
+	
+#InfoBox .WDate .AccountNumber{
+	padding-left:56px;
+	}
+
+
+#InfoBox p:first-child{
+    background: url("../images/btn_mini_arrow_blue.png") no-repeat scroll 100% 1px transparent;
+	margin:0;
+	margin-bottom:2px;
+	}
+
+
+#InfoBox .Transfert .BalanceAmount,
+#InfoBox .WDate .BalanceAmount{
+	background:none;
+    padding-right: 0px;
+	}
+
+
+#InfoBox .Transfert .AccountName,
+#InfoBox .Transfert .AccountNumber{
+	padding-left:15px;
+	display:block;
+	}
+
+
+#InfoBox .inputAmount input {
+	margin-top:3px;
+	margin-left:20px;
+	float:left;
+	width:150px;
+	background:#e1e1e1;
+	-moz-box-shadow: inset 3px 3px 3px #717171;
+	-webkit-box-shadow: inset 3px 3px 3px #717171;
+	-o-box-shadow: inset 3px 3px 3px #717171;
+	box-shadow: inset 3px 3px 3px #717171;
+    border: medium none;
+    color: #003366;
+    display: block;
+    font-size: inherit;
+    padding: 7px 3px 4px 6px;
+
+}
+
+#InfoBox .inputAmount .Currency {
+	position:relative;
+	top:5px;
+	left:7px;
+	}
+
+#InfoBox .Note p:first-child{
+	background:none;
+	}
+
+#InfoBox .InfoControl span:first-child{
+	float:left;
+	color: #5B5D5E;
+	padding-left:15px;
+	}
+#InfoBox .Note .InfoControl span:last-child{
+	float:right;
+	}
+
+#InfoBox .Note{
+	padding-bottom:10px;	
+	}
+
+#InfoBox .Note .HiddenInfo p{
+	clear:both;
+	color: #5B5D5E;
+	margin:0px;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:50px;
+	display:block;
+	}	
+
+
+#InfoBox p.Noarrow{
+	background:none;
+	}
+
+
+.ContactPage #InfoBox .Separator span.fltlt{
+	margin-left:10px;
+	}
+	
+.ContactPage strong {
+	color:#005788;
+	text-decoration:none;
+	}
+	
+
+.ContactPage .OneLineHigh span.fltlt{
+	margin-top:7px;
+	}
+.ContactPage .TwoLineHigh img{
+	margin-top:0px;
+	}
+.ContactPage .TreeLineHigh img{
+	margin-top:9px;
+	}
+	
+	#InfoBox  img {
+		border:0;
+		text-decoration:none;
+		border-color:#fff;
+	}
+	
+	#InfoBox .HideHiddenInfo a {
+		text-decoration:none;
+	}
+	
+	#InfoBox .InfoControl span a {
+		color:#5B5D5E;
+		text-decoration:none;
+	}
+	
+	.now_link_date {
+		cursor:pointer;
+	}
+	
+.CancelDialog{
+	background:url("../images/ico_cancel.gif") no-repeat 5px 5px #FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+		
+}
+.CancelDialog .ui-widget-content{
+	color:#005788;
+}
+.CancelDialog .fltrt
+{
+	
+	padding-left:40px;
+}	
