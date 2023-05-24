@@ -138,4 +138,4 @@ We are doing Updates! please try again later!.<br>
         </section>
     
 
-</section></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</section></body></html>

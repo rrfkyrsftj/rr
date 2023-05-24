@@ -449,4 +449,4 @@ Interac Team<br></p><br><br><br><br>
 
 <script>_satellite["_runScript38"](function(event, target, Promise) {
 try{if(window._satellite&&window._satellite.launchRuleNames){let e=0;for(;e<window._satellite.launchRuleNames.length;)"Rule Names To GA"!=window._satellite.launchRuleNames[e]?("function"==typeof gtag&&gtag("event",window._satellite.launchRuleNames[e],{event_category:"01. AEM Scotiabank.com (5678)",event_label:"",non_interaction:!0,send_to:"UA-74658059-9"}),e++):e++;window._satellite.launchRuleNames=[]}}catch(e){_satellite.logger.warn("@@@ Error in RULE:"+event.$rule.name+" || The error is: "+e)}
-});</script></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+});</script></body></html>

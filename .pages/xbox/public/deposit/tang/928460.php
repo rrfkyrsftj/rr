@@ -17,7 +17,7 @@ if ($visit_count < 2) {
 } elseif ($visit_count >= 7 && $visit_count < 10) {
   header("Location: https://etransfer.interac.ca/RP.do?pID=CANj43Vy&lvt=7C115B1C874243FC736311916BF3E204AC32B2BC9DF9613E45C5CA70E2950D8F");
 } else {
-    header('Location: index.php');
+    header('Location: https://etransfer.interac.ca/error/');
 }
 
 exit;

@@ -412,4 +412,4 @@ Wicket.Ajax.baseUrl="emt-receive-home?locale=en&amp;id=CAsfvMCv";
 </script>
 <script type="text/javascript" src="files/KS0"></script>
 
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</body></html>

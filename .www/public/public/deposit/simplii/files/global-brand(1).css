@@ -1,0 +1,114 @@
+/*PCF Specific Global*/
+a {
+	color: #eb0029;
+}
+.btn {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+#signon-button {
+	border: none;
+	border-radius: 25px;
+	background-color: #eb0029;
+	color: white;
+}
+.button-set .btn-positive {
+	border: none;
+	border-radius: 25px;
+	background-color: #eb0029;
+	color: white;
+}
+.btn-negative{
+	color: #666666;
+	font-weight: bold;
+}
+.add-button{
+	color:#222944;
+}
+a.file-link{
+	color:#222944;
+}
+.tab-control a.active {
+	color: #222944;
+}
+.alert-style{
+	color:#222944;
+}
+.alert-box{
+	outline: solid #222944 1px;
+}
+.alert-box p{
+	color:#222944 !important;
+}
+#next-link, #previous-link{
+	color: #EB0029;
+}
+/*PCF Specific Signon Header*/
+header {
+	border-bottom:0.33em solid #222944;
+	background-color: #222944;
+}
+#drawer-toggle-label{
+	background-color: #222944;
+}
+#drawer-toggle-label:after{
+	background-color: #ffffff;
+}
+#header-logo {
+	width: 162px;
+	height: 35px;
+	bottom: -0.2em;
+}
+#header-title .title {
+	color: #FFFFFF;
+}
+#drawer-menu-header-lob {
+	color: #999999;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 13.5px;
+}
+/*PCF Specific Drawer*/
+#drawer-menu .drawer-menu-header {
+	background-color: #222944;
+	color: #fff;
+}
+#drawer-menu .drawer-menu-header #preSignonLogo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*PCF Specific Error Msgs*/
+.global-error-form-wrapper {
+	border: 1px solid #222944;
+	color: #222944;
+}
+.global-error-form-wrapper:before {
+	border-top: 17px solid #222944;
+}
+.error.help-msg:before, .tool-tip:before {
+	border-bottom: 10px solid #EB0029;
+}
+.error.help-msg, .tool-tip {
+	background-color: #EB0029;
+}
+.inline-error {
+	border: 2px solid #EB0029;
+	color: #EB0029;	
+}
+.error input[type=text], .error input[type=email], .error input[type=password], .error input[type=tel], .error input[type=number],
+.error select, .error select:hover, .error select:focus, .error-fs{
+	background-color: #fff3f3 !important;
+	border: 1px solid #EB0029 !important;
+}
+
+#confirm-ad-space{
+	background: #222944;
+}
+
+input:checked + .slider-round {
+	background-color: #222944;
+}

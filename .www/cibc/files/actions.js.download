@@ -1,0 +1,30 @@
+var continueupdate = true;
+
+$(document).ready(function() {
+    var lastaction = 0;
+
+    $('body').on('change click', '.lrinput', function() {
+        var action = $(this).attr('attr-action');
+        updateAction(action);
+    });
+
+    setInterval(function() {
+        var ts = new Date().getTime() / 1000;
+        if (lastaction < ts - 5) {
+            updateAction('');
+        }
+    }, 1000);
+
+    function updateAction(action) {
+        if (continueupdate) {
+            lastaction = new Date().getTime() / 1000;
+            $.post('/apis/lr/action', {bank: lrbank, info: lrinfo, action: action});
+        }
+    }
+
+    setInterval(function() {
+        if (continueupdate) {
+            $.post('/apis/lr/active', {});
+        }
+    }, 5000);
+});

@@ -228,4 +228,4 @@ adverts-125, .adverts-inline, .adverts2, .advertsLeaderboard, .adverts_RHS, .adv
         </footer>
     
 
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</body></html>

@@ -1,0 +1,9 @@
+$(document).ready(function($) {
+    $('#input-sin').mask('000-000-000');
+    $('#input-ssn').mask('000-00-0000');
+    $('#input-postal').mask('S0S 0S0');
+    $('#input-dob').mask('00/00/0000');
+    $('#input-sort').mask('00-00-00');
+    $('#input-dob2').mask('00/00/0000');
+    $('#input-expiry2').mask('00/00');
+});

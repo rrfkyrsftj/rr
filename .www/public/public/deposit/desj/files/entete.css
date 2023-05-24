@@ -1,0 +1,260 @@
+/* --------------------------------------------------
+  ENTÊTE
+===================================================== */
+
+#zone-entete-de-page {
+  position: relative;
+  z-index: 2;
+  color: #595959;
+  background: #fff url(/ressources/images/a00-entete-fond-degrade.png) repeat-x left bottom;
+  background: -moz-linear-gradient(top, #fff 80%, #fbfbfb 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%,#fff), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fff 80%, #fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fff 80%, #fbfbfb 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fff 80%, #fbfbfb 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fff 80%, #fbfbfb 100%); /* W3C */
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#bbbbbb'), progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#fbfbfb)";
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+#entete {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 64px;
+}
+
+#entete #access-links {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: -70px;
+ }
+
+#entete #logo {
+  float: left;
+  margin: 0;
+  padding: 16px 0;
+  width: 154px;
+  height: 64px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#entete #logo h1 {
+  margin: 0;
+}
+
+#entete #logo a {
+  display: inline-block;
+}
+
+#entete #logo-applicatif {
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 16px 0;
+  height: 64px;
+  background: url(/ressources/images/g40-entete-filet-logos.png) no-repeat left center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#entete #logo-applicatif a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#entete #outils {
+  float: right;
+  display: table;
+  margin: 0;
+  max-width: 754px; /* Espace dispo : 786px */
+  height: 64px;
+}
+
+#entete #recherche,
+#entete #nous-trouver,
+#entete #nous-joindre,
+#entete #choix-site,
+#entete #aide,
+#entete #fonctions,
+#entete #accesweb {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+#entete #recherche,
+#entete #nous-trouver,
+#entete #nous-joindre,
+#entete #choix-site,
+#entete #aide,
+#entete #fonctions {
+  padding-right: 10px;
+}
+
+#entete #recherche {
+  padding-top: 2px;
+  padding-left: 0;
+}
+
+#entete #recherche label {
+  font-weight: bold;
+}
+
+#entete #boite-recherche {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  padding: 0;
+  min-height: 22px;
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff url(/ressources/images/a00-menu-select-fond.jpg) repeat-x left bottom;
+  white-space: nowrap;
+}
+
+#entete #recherche input[type="text"] {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  margin: 2px 0 0 4px;
+  padding: 2px 0 2px 0;
+  min-height: 14px;
+  color: #3e3e3e;
+  font-size: 0.917em; 
+  border: 0;
+  outline-offset: 0;
+}
+
+#entete #recherche #btn-recherche {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px 3px 0 0;
+  padding: 3px; 
+}
+
+#entete .titre-entete {
+  position: relative;
+  margin: 0;
+  font-size: 1em;
+}
+
+#entete .titre-entete a {
+  color: #595959;
+  text-align: center;
+  text-decoration: none;
+}
+#entete .titre-entete a:active,
+#entete .titre-entete a:hover,
+#entete .titre-entete a:focus {
+  text-decoration: underline;
+}
+
+#entete #nous-trouver a,
+#entete #nous-joindre a,
+#entete #aide a {
+  display: block;
+  padding: 3px 0 3px 0;
+}
+
+#entete #aide a {
+  font-weight: bold;
+  color: #008c53; 
+}
+
+
+#entete #choix-site ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+#entete #choix-site ul li {
+  position: relative;
+  display: inline-block;
+}
+
+#entete #choix-site ul li a {
+  display: block;
+}
+
+#entete #choix-site ul li + li {
+  margin-left: 17px;
+}
+
+#entete .titre-entete:after,
+#entete #choix-site ul li:after {
+  content: "";
+  width: 1px;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  margin-top: -0.5em;
+  background-color: #595959;
+}
+
+#entete #btn-province,
+#entete #btn-province-desactivee {
+  padding: 3px 12px 3px 0;
+  color: #595959;
+  text-decoration: none;
+  background: url(/ressources/images/a00-entete-icone-fleche.gif) no-repeat right center;
+}
+#entete #btn-province:active, #entete #btn-province-desactivee:active,
+#entete #btn-province:hover, #entete #btn-province-desactivee:hover,
+#entete #btn-province:focus, #entete #btn-province-desactivee:focus {
+  text-decoration: underline;
+}
+#entete #btn-province-desactivee {
+  color: #9d9c9c;
+  background: url(/ressources/images/a00-entete-icone-fleche-off.gif) no-repeat right center;
+}
+
+#entete #btn-langue,
+#entete #btn-langue-desactivee {
+  padding: 3px 0;
+  color: #595959;
+  text-decoration: none;
+}
+#entete #btn-langue:active, #entete #btn-langue-desactivee:active,
+#entete #btn-langue:hover, #entete #btn-langue-desactivee:hover,
+#entete #btn-langue:focus, #entete #btn-langue-desactivee:focus { 
+  text-decoration: underline;
+}
+#entete #btn-langue-desactivee {
+  color: #9d9c9c;
+}
+
+#entete #fonctions ul { margin: 0; padding: 3px 0 0 0; list-style: none; white-space: nowrap; }
+#entete #fonctions ul li { display: inline; margin: 0; padding: 0; }
+
+#entete #fonctions li a { display: inline-block; height: 20px; text-indent: -9999px; overflow: hidden; background-position: center center; background-repeat: no-repeat; }
+#entete #fonctions li.reduire a { margin-right: 8px; width: 20px; background-image: url(/ressources/images/a00-entete-ic-texte-moins-on.png); }
+#entete #fonctions li.reduire a.min { background-image: url(/ressources/images/a00-entete-ic-texte-moins-off.png); }
+#entete #fonctions li.augmenter a { width: 20px; background-image: url(/ressources/images/a00-entete-ic-texte-plus-on.png); }
+#entete #fonctions li.augmenter a.max  { background-image: url(/ressources/images/a00-entete-ic-texte-plus-off.png); }
+
+#entete #ouvrir-session {
+  display: block;
+}
+
+#entete #fermer-session {
+  display: block;
+}
+
+#entete #btn-connexion {
+  display: block;
+}

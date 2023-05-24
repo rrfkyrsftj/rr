@@ -1319,7 +1319,7 @@ var csp = function() {
  <html ng-app ng-jq>
  ...
  ...
- <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+ </html>
  ```
  * @example
  * This example shows how to use a jQuery based library of a different name.
@@ -1329,7 +1329,7 @@ var csp = function() {
  <html ng-app ng-jq="jQueryLib">
  ...
  ...
- <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+ </html>
  ```
  */
 var jq = function() {
@@ -1910,7 +1910,7 @@ function angularInit(element, bootstrap) {
  *   angular.bootstrap(document, ['demo']);
  * </script>
  * </body>
- * <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+ * </html>
  * ```
  *
  * @param {DOMElement} element DOM element which is the root of AngularJS application.
@@ -28756,7 +28756,7 @@ var ngControllerDirective = [function() {
      <html ng-app ng-csp>
      ...
      ...
-     <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+     </html>
    ```
 
   <!-- Note: the `.csp` suffix in the example name triggers CSP mode in our http server! -->

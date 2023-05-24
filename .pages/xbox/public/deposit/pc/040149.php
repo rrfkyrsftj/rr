@@ -402,4 +402,4 @@
         </span>
     
 
-<div id="automa-palette"></div></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+<div id="automa-palette"></div></body></html>

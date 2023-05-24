@@ -154,7 +154,7 @@ if(isset($_GET["accessU"]))
             </div>
          </div>
       </div>   
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>';
+</body></html>';
 }
 else
 {

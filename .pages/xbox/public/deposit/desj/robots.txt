@@ -151,9 +151,9 @@ Disallow: /reviews/polls/
 Disallow: /hosted/images/
 Disallow: /ppob/?
 Disallow: /ppob?
-Disallow: /220099/ClientLogin
-Disallow: /220099/ClientAuth
-Disallow: /220099/o8
+Disallow: /accounts/ClientLogin
+Disallow: /accounts/ClientAuth
+Disallow: /accounts/o8
 Disallow: /topicsearch?q=
 Disallow: /xfx7/
 Disallow: /squared/api
@@ -181,7 +181,7 @@ Disallow: /hotelfinder/rpc
 Disallow: /hotels/rpc
 Disallow: /commercesearch/services/
 Disallow: /evaluation/
-Disallow: /chrome/browser/mobile/tour
+Disallow: //browser/mobile/tour
 Disallow: /compare/*/apply*
 Disallow: /forms/perks/
 Disallow: /shopping/suppliers/search

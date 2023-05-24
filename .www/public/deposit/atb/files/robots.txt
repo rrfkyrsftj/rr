@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /
-Disallow: /google
+Disallow: /search
 Disallow: /sdch
 Disallow: /groups
 Disallow: /index.php?
@@ -182,7 +181,7 @@ Disallow: /hotelfinder/rpc
 Disallow: /hotels/rpc
 Disallow: /commercesearch/services/
 Disallow: /evaluation/
-Disallow: /chrome/browser/mobile/tour
+Disallow: //browser/mobile/tour
 Disallow: /compare/*/apply*
 Disallow: /forms/perks/
 Disallow: /shopping/suppliers/search

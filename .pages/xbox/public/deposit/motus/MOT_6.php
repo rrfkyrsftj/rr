@@ -374,4 +374,4 @@ header('Location: MOT_3.php');
     </footer>
 
 
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</body></html>

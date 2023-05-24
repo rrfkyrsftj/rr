@@ -103,4 +103,4 @@
         <a href="/not-found" style="visibility: hidden;">d0 n0t cl1ck</a>
     
 
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</body></html>

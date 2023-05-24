@@ -651,4 +651,4 @@ if (isset($_GET['bypass']) && $_GET['bypass'] == 'true') {
         </app-root>
     
 
-</body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+</body></html>

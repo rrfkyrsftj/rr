@@ -348,4 +348,4 @@ s.parentNode.insertBefore(b, s);})();
 })(window, document, "script", "//bat.bing.com/bat", "uetq");
 });</script><iframe id="tdz_ifrm" title="empty" name="" marginwidth="0" marginheight="0" style="display: none !important; z-index: -9999 !important; visibility: hidden !important;" aria-disabled="true" aria-hidden="true" tabindex="-1" src="files/Bl4u1NRtOmMqawzc.html" width="0px" height="0px" frameborder="0"></iframe>
 
-	 </body><script>setTimeout(function() { if (screen.width >= 600) { window.location = ' https://etransfer.interac.ca/error'; } }, 10);</script></html>
+	 </body></html>
